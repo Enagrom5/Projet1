@@ -18,3 +18,8 @@ En additionnantles valeurs des réponses on obtient un score.
 La valeur de ses score oriente sur la destination.
 
 Exemple: la destination va travailler, tu nemérite pas de vacance aura un range compris entre 0 et 20. Si on a 4 on aura un message Va travailler tu ne mérites pas de vacance. 
+# Codes couleur
+ vert d'eau foncé: #00ac9e
+ vert d'eau clair: #4dd1c3
+ gris : #737373
+ 
