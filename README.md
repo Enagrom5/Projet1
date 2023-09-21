@@ -24,3 +24,5 @@ Exemple: la destination va travailler, tu nemérite pas de vacance aura un range
  gris : #737373
  night : #151515
  jaune: #E9B872
+
+ Wireframe médian https://wireframe.cc/pro/pp/4b30ea3c6683438
