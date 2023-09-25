@@ -1,3 +1,32 @@
-h1 {
-    color: #00ac9e
-}
+ @font-face {
+     font-family: 'inter-bold';
+     src: url(Projet1\fonts\Inter-Bold.woff2) format(.woff2);
+ }
+
+ body {
+     font-family: 'inter-bold', sans-serif;
+ }
+
+ nav {
+     display: flex;
+     flex-direction: row;
+     justify-content: space-between;
+     background-color: #737373;
+ }
+
+ .logo-and-slogan {
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+ }
+
+ ul {
+     display: flex;
+     justify-content: space-around;
+     list-style: none;
+     padding: 1em;
+ }
+
+ h1 {
+     color: #00ac9e
+ }
