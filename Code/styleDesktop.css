@@ -2,12 +2,13 @@
     margin: 0;
     padding: 0;
 }
-*{
-    margin:0;
+
+* {
+    margin: 0;
 }
 
 /*NAVBAR*/
-nav{
+nav {
     display: flex;
     justify-content: space-around;
     background-color: #737373;
