@@ -1,0 +1,38 @@
+:root {
+    margin: 0;
+    padding: 0;
+}
+
+* {
+    margin: 0;
+    
+}
+
+/*NAVBAR*/
+nav {
+    display: flex;
+    justify-content: space-between;
+    background-color: #737373;
+    color: azure;
+}
+nav ul ,li{
+list-style: none;
+display: flex;
+align-items: center;
+flex-direction: row;
+padding-right: 2rem;
+}
+nav img{
+    padding-left: 4rem;
+}
+
+
+
+
+/* BODY*/
+.question{
+    display: flex;
+    justify-content:center;
+    padding :3rem;
+    color :white;
+}

@@ -1,82 +1,42 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Badtrip.advisor : Le quiz</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="icon" href="Ressources\icone.png">
+    <title>BadTripAdvisor</title>
+    <link rel="stylesheet" href="styleDesktop.css">
 </head>
 
 <body>
-    <nav> <!-- Bandeau avec logo -->
-        <ul> <!-- Liste 1 -->
-            <li> Accueil </li>
-            <li> Nos Offres </li>
-            <li> Où partir </li>
-        </ul>
-        <div class="logo-and-slogan"> <!-- bloc du logo + slogan -->
-            <img src="" alt="logo" class="logo" /> <!-- Logo de l'entreprise -->
-            <img href="" alt="BADTRIP.ADVISOR" class="companyName" /> <!-- Nom de l'entreprise .jpg -->
-        </div>
-        <ul> <!-- Liste 2 -->
-            <li> Mon espace </li>
-            <li> Contact </li>
-        </ul>
+    <nav>
 
+        <img src="../assets/logo/LOGO.png" alt="logo" name="logo" />
+
+        <ul>
+            <li>
+                <h2>Home</h2></a>
+            </li>
+            <li>
+                <h2>Notre compagnie</h2>
+            </li>
+            <li>
+                <h2>Nos voyages</h2>
+            </li>
+            <li>
+                <h2>Générateur de destination</h2>
+            </li>
+        </ul>
     </nav>
-    <h1>NOS MEILLEURES SUGGESTIONS POUR VOS PIRES VACANCES</h1>
-    <h2> Quiz: Dites-nous qui vous êtes, nous vous dirons où partir en vacances </h2>
-    <section class="askName">
-        <section class="allQuestions"> <!-- Bloc relatif à toutes les questions -->
-            <div class="container"> <!-- Container qui inclut la question et les réponses -->
-                <div class="question-card"> <!-- carte "question "-->
-                    <img src="" alt="*" style="width:100%"> <!-- Image de la question -->
-                    <div class="question"><!-- classe pour le texte de la question -->
-                        <h4>Question 1</h4><!-- texte de la question -->
-                    </div>
-                    <div class="card"> <!-- classe pour la carte "réponse" -->
-                        <img src="" alt="" style="width:100%"> <!-- image de la réponse -->
-                        <div class="reponse"> <!-- classe pour le texte de la réponse -->
-                            <h4><b>Reponse A</b></h4> <!-- texte de la réponse -->
 
-                        </div>
-                        <div class="card">
-                            <img src="" alt="" style="width:100%">
-                            <div class="text-reponse">
-                                <h4><b>Reponse B</b></h4>
+    <section class="Questions"></section>
+    
 
-                            </div>
-                        </div>
-                    </div>
-                </div>
+    <section class="destination">
+        <h2>Félicitation! Voici la destination de tes rêves:</h2>
 
-            </div>
-            </div>
-        </section>
-        <section class="answer">
-            <h2> Résultat: Votre destination de rêve!</h2>
-            <div class="destination">
-                <h3> Destination 1 </h3>
-                <p> ... </p>
-                <img src="" alt="*" style="width:100%">
-        </section>
-        <section class="collect">
-            <p> Intéressé(e) par cette destination ? Renseignez vos coordonnées et nos équipes vous contacteront dans
-                les meilleurs délais.</p>
-            <section class="contactForm">
-                <label for="name"> Nom / Prénom</label>
-                <input id="name" name="name" type="text" />
-                <label for="adress"> Adresse </label>
-                <input id="adress" name="adress" type="text" />
-                <label for="mail"> E-mail </label>
-                <input id="mail" name="mail" type="text" />
-            </section>
-            <button class="button" type="button">
-                J'envoie le formulaire de contact
-            </button>
-        </section>
+    </section>
 </body>
+<script src="script.js"></script>
 
 </html>
