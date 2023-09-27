@@ -5,13 +5,18 @@
 
 * {
     margin: 0;
+    font-family: "Inter", sans-serif;
 }
 
 /*NAVBAR*/
+@font-face {
+    font-family: "Inter";
+    src: ../fonts/ ;
+}
 nav {
     display: flex;
     justify-content: space-between;
-    background-color: #737373;
+    background-color: #434242;
     color: azure;
 }
 
@@ -32,6 +37,9 @@ nav img {
 
 
 /* BODY*/
+.questions{
+    background-color: #151515;
+}
 
 .question {
     display: flex;
@@ -64,7 +72,21 @@ nav img {
 .img2 {
     border-radius: 5px;
 }
+.image-animation {
+    transition: opacity 0.3s ease-in-out;
+}
 
+.image-animation:hover {
+    opacity: 0.8;
+}
+
+.image-selected {
+    border: 2px solid hsl(35, 73%, 68%); 
+}
+
+.image-clicked {
+    transform: scale(0.9);
+}
 .footer1,
 .footer2 {
     border-radius: 5px;
@@ -82,9 +104,13 @@ nav img {
     background-color: #00ac9e;
     display: flex;
     justify-content: center;
+    padding: 2rem;
+    margin: 2rem;
 }
 
 .destination {
     background-color: #151515;
     color: azure;
+    display: none;
+    height: 100vh;
 }
