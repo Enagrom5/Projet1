@@ -18,6 +18,7 @@ nav {
     justify-content: space-between;
     background-color: #434242;
     color: azure;
+    width: 100%;
 }
 
 nav ul,
@@ -37,8 +38,15 @@ nav img {
 
 
 /* BODY*/
-.questions{
+body{
+    grid-template-rows: auto 1fr auto;
+    height: 100vh;
     background-color: #151515;
+}
+.questions{
+    
+    
+ 
 }
 
 .question {
@@ -109,8 +117,16 @@ nav img {
 }
 
 .destination {
+    display:flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
     background-color: #151515;
     color: azure;
     display: none;
     height: 100vh;
+}
+form{
+    display: grid;
+    grid-template-rows: 1fr,1fr,1fr;
 }

@@ -272,7 +272,7 @@ const destinationList =[{
 },
 {
     name: "Bergerie dans le Larzac",
-    description: "Pour ce reposer quoi de mieux que le travail de la terre!",
+    description: "Pour se reposer quoi de mieux que le travail de la terre!",
     img:"",
 },
 {
@@ -287,7 +287,7 @@ const destinationList =[{
 },
 {
     name: "Centre de désintoxication",
-    description: "Dernier lieu à la mode pour partir en vacance. Méfiance tout de même n'accepter aucunes pilules qu'on vous proposerait!",
+    description: "Dernier lieu à la mode pour partir en vacances. Méfiance tout de même n'accepter aucune pilule qu'on vous proposerait!",
     img:"",
 },
 {
@@ -296,13 +296,13 @@ const destinationList =[{
     img:"",
 },
 {
-    name: "Bivouac chez les marcheurs blanc",
+    name: "Bivouac chez les marcheurs blancs",
     description: "Qui n'a jamais rêvé de franchir le mur? Ce bivouac est fait pour vous.",
     img:"",
 },
 {
     name: "Séjour linguistique chez les Goa'uld ",
-    description: "Population extrèmement amicale, avec eux c'est presque symbiotique. Veillez à ne pas en ramener un en rentrant!",
+    description: "Population extrêmement amicale, avec eux c'est presque symbiotique. Veillez à ne pas en ramener un en rentrant!",
     img:"",
 },
 {
@@ -347,6 +347,10 @@ buttonResult.addEventListener("click", function () {
 
 })
 
+const submitButton= document.querySelector(".submitButton");
 
+submitButton.addEventListener("click",function(){
+    alert("Merci de votre intéret. Nos équipes reviendront vers vous au plus vite!")
+})
 
 
