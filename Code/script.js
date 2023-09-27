@@ -1,6 +1,5 @@
-const questions = document.querySelector('.Questions');
-const body = document.querySelector("body")
-questions.style.backgroundColor = "#151515"
+const questions = document.querySelector('.questions');
+
 
 
 /**
@@ -14,7 +13,6 @@ const questionReponse = [
         picture2: "../assets/bronzage.jpg",
         reponse1: "Musée",
         reponse2: "Bronzage",
-        id: "question1"
     },
     {
         question: "Blockbuster ou Film d'auteur?",
@@ -22,7 +20,6 @@ const questionReponse = [
         picture2: "../assets/main-tenue-clap-devant-aimer-mime-couple.jpg",
         reponse1: "Blockbuster",
         reponse2: "Film d'auteur",
-        id: "question2"
     },
     {
         question: "Chaud ou Froid?",
@@ -38,7 +35,6 @@ const questionReponse = [
         picture2: "../assets/montagne.jpg",
         reponse1: "Plage",
         reponse2: "Montagne",
-        id: "question4",
     },
     {
         question: "Bière ou Vin?",
@@ -46,7 +42,6 @@ const questionReponse = [
         picture2: "../assets/vin.jpg",
         reponse1: "Bière",
         reponse2: "Vin",
-        id: "question5",
     },
     {
         question: "Sucré ou Salé?",
@@ -54,7 +49,6 @@ const questionReponse = [
         picture2: "../assets/sale.jpg",
         reponse1: "Sucré",
         reponse2: "Salé",
-        id: "question6",
     },
     {
         question: "Humain ou Robot?",
@@ -62,7 +56,6 @@ const questionReponse = [
         picture2: "../assets/robot.jpg",
         reponse1: "Humain",
         reponse2: "Robot",
-        id: "question7"
     },
     {
         question: "Livre ou Télé?",
@@ -70,7 +63,6 @@ const questionReponse = [
         picture2: "../assets/tele.jpg",
         reponse1: "Livre",
         reponse2: "Télé",
-        id: "question8"
     },
     {
         question: "PC ou Console?",
@@ -78,7 +70,6 @@ const questionReponse = [
         picture2: "../assets/console.jpg",
         reponse1: "PC",
         reponse2: "Console",
-        id: "question9"
     },
     {
         question: "Windows ou Linux?",
@@ -86,15 +77,13 @@ const questionReponse = [
         picture2: "../assets/linux.jpg",
         reponse1: "Windows",
         reponse2: "Linux",
-        id: "question10"
     },
     {
-        question: "Legolas ou Guimli?",
+        question: "Legolas ou Gimli?",
         picture1: "../assets/legolas.jpg",
         picture2: "../assets/guimli.jpg",
         reponse1: "Legolas",
-        reponse2: "Guimli",
-        id: "question11",
+        reponse2: "Gimli",
     },
     {
         question: "Pilule Rouge ou Pilule Bleue?",
@@ -102,7 +91,6 @@ const questionReponse = [
         picture2: "../assets/bleu.jpg",
         reponse1: "Pilule Rouge",
         reponse2: "Pilule Bleue",
-        id: "question12"
     },
     {
         question: "Jour ou Nuit?",
@@ -110,7 +98,6 @@ const questionReponse = [
         picture2: "../assets/nuit.jpg",
         reponse1: "Jour",
         reponse2: "Nuit",
-        id: "question13",
     },
     {
         question: "Java ou Javascript?",
@@ -118,7 +105,6 @@ const questionReponse = [
         picture2: "../assets/js.jpg",
         reponse1: "Java",
         reponse2: "Javascript",
-        id: "question14"
     },
     {
         question: "Sport ou Sieste?",
@@ -126,7 +112,6 @@ const questionReponse = [
         picture2: "../assets/sieste.jpg",
         reponse1: "Sport",
         reponse2: "Sieste",
-        id: "question15",
     }
 ]
 
@@ -138,22 +123,15 @@ function createCard(quest, image1Url, image2Url, reponse1, reponse2) {
 
     const questionContainer = document.createElement("div");
     questionContainer.classList.add("questionContainer");
-    //questionContainer.id.add(`${question}`)
-    questionContainer.style.display = "flex";
-    questionContainer.style.flexDirection = "column";
-    questionContainer.style.paddingBottom = "5rem";
     questions.appendChild(questionContainer);
 
     const question = document.createElement("h2");
     question.classList.add("question")
     question.textContent = quest;
-    
     questionContainer.appendChild(question);
 
     const cardsContainers = document.createElement("span");
     cardsContainers.classList.add("cards-containers");
-    cardsContainers.style.display = "flex";
-    cardsContainers.style.justifyContent = "space-around";
     questionContainer.appendChild(cardsContainers);
 
     const cardContainer1 = document.createElement("span");
@@ -166,33 +144,26 @@ function createCard(quest, image1Url, image2Url, reponse1, reponse2) {
 
     const cardContainerBody1 = document.createElement("div");
     cardContainerBody1.classList.add("containerbody1");
-
     cardContainer1.appendChild(cardContainerBody1);
 
 
     const button1 = document.createElement("button");
     button1.classList.add("button1");
-    button1.style.padding = "0";
-    button1.style.borderWidth = "0";
-    button1.style.borderRadius = "15px";
-    button1.style.borderColor = "#151515";
-    button1.style.backgroundColor = "#E9B872";
     cardContainerBody1.appendChild(button1);
-
-
 
     const img1 = document.createElement("img");
     img1.src = `${image1Url}`;
     img1.alt = reponse1;
-    img1.classList.add("image1");
-    img1.style.borderRadius = "5px";
+    img1.classList.add("image1", "image-animation");
+    img1.addEventListener("click", () => {
+        img1.classList.toggle("image-clicked");
+        img2.classList.remove("image-clicked");
+    });
     button1.appendChild(img1)
 
     const footer1 = document.createElement("p");
     footer1.classList.add("footer1");
     footer1.innerHTML = reponse1;
-    footer1.style.backgroundColor = "#E9B872";
-    footer1.style.borderRadius = "5px";
     button1.appendChild(footer1);
 
 
@@ -202,28 +173,24 @@ function createCard(quest, image1Url, image2Url, reponse1, reponse2) {
 
     const button2 = document.createElement("button");
     button2.classList.add("button2")
-    button2.style.padding = "0";
-    button2.style.borderWidth = "0";
-    button2.style.borderRadius = "15px";
-    button2.style.borderColor = "#151515";
-    button2.style.backgroundColor = "#E9B872";
     cardContainerBody2.appendChild(button2);
 
     const img2 = document.createElement("img");
     img2.src = `${image2Url}`;
     img2.alt = reponse2;
-    img2.style.borderRadius = "5px";
-    img2.classList.add("image2");
+    img2.classList.add("image2", "image-animation");
+    img2.addEventListener("click", () => {
+        img2.classList.toggle("image-clicked");
+        img1.classList.remove("image-clicked");
+    });
     button2.appendChild(img2)
 
     const footer2 = document.createElement("p");
     footer2.classList.add("footer2");
     footer2.innerHTML = reponse2;
-    footer2.style.borderRadius = "5px";
-    footer2.style.backgroundColor = "#E9B872";
     button2.appendChild(footer2);
 
-    return button1, button2
+
 }
 
 
@@ -280,23 +247,106 @@ displayNextQuestion()
 */
 
 
-// ---------------------------------------------------
+// ---------------------------------------------------//
 
 
 
 
+/* Tableau pour les destinations*/
+let randomNumber=Math.floor(Math.random() * 15);
+console.log(randomNumber);
+const destinationList =[{
+    name: "Un monatère",
+    description: "Connu pour leur fête, les moines vous assureront un séjour inoubliable en vous contant les histoires les plus palpitantes!",
+    img:"",
+} ,
+{
+    name: "Le Mordor",
+    description: "Bein connu pour sa population un poil rustique, et ses paysages luxuriants, le Mordor est un pays ou il fait bon vivre. C'est la saison idéale! Après il fera un peu trop froid.",
+    img:"",
+},
+{
+    name: "Hoth la planète de glace",
+    description: "Attendez vous à une expérience chaleureuse! La cuisine locale vous coupera le souffle!",
+    img:"",
+},
+{
+    name: "Bergerie dans le Larzac",
+    description: "Pour ce reposer quoi de mieux que le travail de la terre!",
+    img:"",
+},
+{
+    name: "Azkaban",
+    description: "The place to be pour profiter de toute la liberté possible!",
+    img:"",
+},
+{
+    name: "Le monde des télétubbies",
+    description: "Endroit paisible et calme. Vous pourrez observer en toute tranquillité les autochtones",
+    img:"",
+},
+{
+    name: "Centre de désintoxication",
+    description: "Dernier lieu à la mode pour partir en vacance. Méfiance tout de même n'accepter aucunes pilules qu'on vous proposerait!",
+    img:"",
+},
+{
+    name: "Camping nudiste",
+    description: "Si vous aimez les séjours simples, celui ci est fait pour vous. Attention Sortez couvert!",
+    img:"",
+},
+{
+    name: "Bivouac chez les marcheurs blanc",
+    description: "Qui n'a jamais rêvé de franchir le mur? Ce bivouac est fait pour vous.",
+    img:"",
+},
+{
+    name: "Séjour linguistique chez les Goa'uld ",
+    description: "Population extrèmement amicale, avec eux c'est presque symbiotique. Veillez à ne pas en ramener un en rentrant!",
+    img:"",
+},
+{
+    name: "Hôtel Cortez",
+    description: "",
+    img:"",
+},
+{
+    name: "Le Tartare",
+    description: "Un incroyable supplice!",
+    img:"",
+},
+{
+    name: "Hôpital psychitrique Ashecliffe",
+    description: "Tellement intense qu'on en perd la boule!",
+    img:"",
+},
+{
+    name: "Croisière sur le Titanic",
+    description: "Profitez de leur animation, les pieds dans l'eau!",
+    img:"",
+}
+]
 
 
 
+/* afficher la page des résultats*/
+const destination = document.querySelector(".destination");
+const buttonContainer = document.querySelector(".button-container");
+const buttonResult = document.querySelector(".button-result");
+const titre=document.querySelector(".titreDestination");
+const destinationImage=document.querySelector(".destinationImage");
+const destinationDescription=document.querySelector(".destinationDescription");
+
+buttonResult.addEventListener("click", function () {
+    questions.style.display = "none";
+    buttonContainer.style.display = "none";
+    destination.style.display = "flex";
+    titre.textContent=`${destinationList[randomNumber].name}`;
+    //destinationImage.textContent=`${destinationList[randomNumber].img}`;
+    destinationDescription.textContent=`${destinationList[randomNumber].description}`;
+
+})
 
 
 
-
-//const compteur=0;
-//button1.addEventListener("click",function(){
-//   compteur += 3;
-//})
-//button2.addEventListener("click",function(){
-// compteur += 8;
-//})
 
