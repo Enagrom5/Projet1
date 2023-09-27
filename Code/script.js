@@ -1,5 +1,11 @@
 const questions = document.querySelector('.Questions');
 const body = document.querySelector("body")
+questions.style.backgroundColor = "#151515"
+
+
+/**
+ * Toutes les questions
+ */
 
 const questionReponse = [
     {
@@ -8,7 +14,7 @@ const questionReponse = [
         picture2: "../assets/bronzage.jpg",
         reponse1: "Musée",
         reponse2: "Bronzage",
-        class: "question1"
+        id: "question1"
     },
     {
         question: "Blockbuster ou Film d'auteur?",
@@ -16,7 +22,7 @@ const questionReponse = [
         picture2: "../assets/main-tenue-clap-devant-aimer-mime-couple.jpg",
         reponse1: "Blockbuster",
         reponse2: "Film d'auteur",
-        class: "question2"
+        id: "question2"
     },
     {
         question: "Chaud ou Froid?",
@@ -24,13 +30,15 @@ const questionReponse = [
         picture2: "../assets/froid.jpg",
         reponse1: "Chaud",
         reponse2: "Froid",
+        id: "question3"
     },
     {
-        question: "Plage ou Montagne",
+        question: "Plage ou Montagne?",
         picture1: "../assets/plage.jpg",
         picture2: "../assets/montagne.jpg",
         reponse1: "Plage",
         reponse2: "Montagne",
+        id: "question4",
     },
     {
         question: "Bière ou Vin?",
@@ -38,6 +46,7 @@ const questionReponse = [
         picture2: "../assets/vin.jpg",
         reponse1: "Bière",
         reponse2: "Vin",
+        id: "question5",
     },
     {
         question: "Sucré ou Salé?",
@@ -45,6 +54,7 @@ const questionReponse = [
         picture2: "../assets/sale.jpg",
         reponse1: "Sucré",
         reponse2: "Salé",
+        id: "question6",
     },
     {
         question: "Humain ou Robot?",
@@ -52,6 +62,7 @@ const questionReponse = [
         picture2: "../assets/robot.jpg",
         reponse1: "Humain",
         reponse2: "Robot",
+        id: "question7"
     },
     {
         question: "Livre ou Télé?",
@@ -59,6 +70,7 @@ const questionReponse = [
         picture2: "../assets/tele.jpg",
         reponse1: "Livre",
         reponse2: "Télé",
+        id: "question8"
     },
     {
         question: "PC ou Console?",
@@ -66,6 +78,7 @@ const questionReponse = [
         picture2: "../assets/console.jpg",
         reponse1: "PC",
         reponse2: "Console",
+        id: "question9"
     },
     {
         question: "Windows ou Linux?",
@@ -73,6 +86,7 @@ const questionReponse = [
         picture2: "../assets/linux.jpg",
         reponse1: "Windows",
         reponse2: "Linux",
+        id: "question10"
     },
     {
         question: "Legolas ou Guimli?",
@@ -80,6 +94,7 @@ const questionReponse = [
         picture2: "../assets/guimli.jpg",
         reponse1: "Legolas",
         reponse2: "Guimli",
+        id: "question11",
     },
     {
         question: "Pilule Rouge ou Pilule Bleue?",
@@ -87,6 +102,7 @@ const questionReponse = [
         picture2: "../assets/bleu.jpg",
         reponse1: "Pilule Rouge",
         reponse2: "Pilule Bleue",
+        id: "question12"
     },
     {
         question: "Jour ou Nuit?",
@@ -94,6 +110,7 @@ const questionReponse = [
         picture2: "../assets/nuit.jpg",
         reponse1: "Jour",
         reponse2: "Nuit",
+        id: "question13",
     },
     {
         question: "Java ou Javascript?",
@@ -101,6 +118,7 @@ const questionReponse = [
         picture2: "../assets/js.jpg",
         reponse1: "Java",
         reponse2: "Javascript",
+        id: "question14"
     },
     {
         question: "Sport ou Sieste?",
@@ -108,12 +126,19 @@ const questionReponse = [
         picture2: "../assets/sieste.jpg",
         reponse1: "Sport",
         reponse2: "Sieste",
+        id: "question15",
     }
 ]
+
+/**
+ * La fonction createCard, permet de créer une carte en fonction des parametres reçu
+ */
+
 function createCard(quest, image1Url, image2Url, reponse1, reponse2) {
 
     const questionContainer = document.createElement("div");
     questionContainer.classList.add("questionContainer");
+    //questionContainer.id.add(`${question}`)
     questionContainer.style.display = "flex";
     questionContainer.style.flexDirection = "column";
     questionContainer.style.paddingBottom = "5rem";
@@ -122,9 +147,7 @@ function createCard(quest, image1Url, image2Url, reponse1, reponse2) {
     const question = document.createElement("h2");
     question.classList.add("question")
     question.textContent = quest;
-    question.style.display = "flex";
-    question.style.justifyContent = "center";
-    question.style.padding = "3rem";
+    
     questionContainer.appendChild(question);
 
     const cardsContainers = document.createElement("span");
@@ -143,27 +166,33 @@ function createCard(quest, image1Url, image2Url, reponse1, reponse2) {
 
     const cardContainerBody1 = document.createElement("div");
     cardContainerBody1.classList.add("containerbody1");
+
     cardContainer1.appendChild(cardContainerBody1);
-    cardContainer1.style.borderRadius = "5px";
+
 
     const button1 = document.createElement("button");
     button1.classList.add("button1");
-    cardContainerBody1.appendChild(button1);
     button1.style.padding = "0";
-    button1.style.borderRadius = "15px"
-    button1.style.boxShadow = "2px,3px,10px,4px black"
+    button1.style.borderWidth = "0";
+    button1.style.borderRadius = "15px";
+    button1.style.borderColor = "#151515";
+    button1.style.backgroundColor = "#E9B872";
+    cardContainerBody1.appendChild(button1);
+
 
 
     const img1 = document.createElement("img");
     img1.src = `${image1Url}`;
     img1.alt = reponse1;
     img1.classList.add("image1");
-    button1.style.borderRadius = "5px"
+    img1.style.borderRadius = "5px";
     button1.appendChild(img1)
 
-    const footer1 = document.createElement("div");
+    const footer1 = document.createElement("p");
     footer1.classList.add("footer1");
     footer1.innerHTML = reponse1;
+    footer1.style.backgroundColor = "#E9B872";
+    footer1.style.borderRadius = "5px";
     button1.appendChild(footer1);
 
 
@@ -173,28 +202,95 @@ function createCard(quest, image1Url, image2Url, reponse1, reponse2) {
 
     const button2 = document.createElement("button");
     button2.classList.add("button2")
-    cardContainerBody2.appendChild(button2);
     button2.style.padding = "0";
-    button2.style.borderRadius = "5px"
+    button2.style.borderWidth = "0";
+    button2.style.borderRadius = "15px";
+    button2.style.borderColor = "#151515";
+    button2.style.backgroundColor = "#E9B872";
+    cardContainerBody2.appendChild(button2);
 
     const img2 = document.createElement("img");
     img2.src = `${image2Url}`;
     img2.alt = reponse2;
+    img2.style.borderRadius = "5px";
     img2.classList.add("image2");
     button2.appendChild(img2)
 
-    const footer2 = document.createElement("div");
+    const footer2 = document.createElement("p");
     footer2.classList.add("footer2");
     footer2.innerHTML = reponse2;
+    footer2.style.borderRadius = "5px";
+    footer2.style.backgroundColor = "#E9B872";
     button2.appendChild(footer2);
 
     return button1, button2
 }
+
+
+
+
 for (const element of questionReponse) {
     //button1, button2// 
     createCard(element.question, element.picture1, element.picture2, element.reponse1, element.reponse2);
-
 }
+
+
+
+/**
+ * Version 2 avec l'affichage d'une question par une question
+ */
+// let i = 0;
+
+// function next(i) {
+//     return i + 1
+// }
+
+
+// while (i < questionReponse.length) {
+
+//     createCard(questionReponse[i].question, questionReponse[i].picture1, questionReponse[i].picture2, questionReponse[i].reponse1, questionReponse[i].reponse2);
+
+//     // créer un bouton, qui permet d'incrementer i pour afficher la question d'après
+//     i++;
+// }
+
+/**
+ * Version 1 OPE mais affiche toutes les questions.
+ */
+
+
+
+// ---------------------------------------------------
+
+
+/* let questionActuelleIndex = 0;
+
+const displayNextQuestion = () => {
+    if (currentQuestionIndex < questionReponse.length) {
+        const {question, picture1, picture2, reponse1, reponse2} = questionReponse[questionActuelleIndex]
+        createCard(question, picture1, picture2, reponse1, reponse2);
+        questionActuelleIndex++
+    } else {
+        console.log("Tu as répondu à tout")
+    }
+}
+
+displayNextQuestion()
+
+*/
+
+
+// ---------------------------------------------------
+
+
+
+
+
+
+
+
+
+
 
 //const compteur=0;
 //button1.addEventListener("click",function(){
