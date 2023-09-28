@@ -49,13 +49,16 @@ body {
     color: white;
 }
 
-
+.questions{
+    display: flex;
+    align-items: center;
+}
 
  .question{
-    display: inline;
-    flex-direction: column;
+    text-align: center;
     padding: 1rem;
     color: white;
+    font-size: larger;
 }
 
 .cardQuestion {
@@ -64,13 +67,14 @@ body {
 
 .answers {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
+    gap: 10rem;
     padding: 0rem 0rem;
 }
 .answers > button {
     background-color: #151515;
-    height: 20rem;
-    width: 25rem;
+    height: 27rem;
+    width: 35rem;
     background-size: cover;
     border-radius: 3%;
     box-shadow: 10px 10px 30px rgb(8, 8, 8),
