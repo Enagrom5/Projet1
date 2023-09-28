@@ -11,7 +11,8 @@
 <body>
     <nav>
 
-        <img src="../assets/logo/LOGO.png" alt="logo" name="logo" />
+        <img src="../assets/logo/LOGO.png" alt="logo" name="logo" width="5%" />
+        <h2 class="slogan"> BADTRIP.ADVISOR</h2>
 
         <ul>
             <li>
@@ -27,36 +28,36 @@
                 <h2>Générateur de destination</h2>
             </li>
         </ul>
-    </nav>
-    <div class="decorTop"><img src="Ressources/décor.png" alt="décor"></div>
-    <section class="questions">
-       
+    </nav>    
+    <section clas="startQuiz">
+        <button class="buttonStart"> Démarrez le quiz!</button>
     </section>
-    <span class="button-container"><button class="button-result" type="button">Découvrir votre
-            destination!</button></span>
 
+    <section class="Questions"> <!-- Bloc incorporant la question et les réponses -->
+        <div class="Question"> <!-- bloc question -->
+            <h4 class="question"></h4>
+        </div>
+
+        <div class="answers"> <!-- bloc réponse A -->
+            <button class="cardAnswerA">
+                <h4 class="answerA"><b></b></h4>
+            </button>
+
+
+            <button class="cardAnswerB"> <!-- bloc réponse B -->
+                <h4 class="answerB"><b></b></h4>
+            </button>
+        </div>
+        </div>
+
+    </section>
+    <!-- 
     <section class="destination">
         <h2>Félicitation! Voici la destination de tes rêves:</h2>
-        <h3 class="titreDestination"></h3>
-        <img class="destinationImage">
-        <p class="destinationDescription"></p>
-        <h4>Si cette destination vous convient. Merci de remplir ce formulaire. Notre équipe de choc vous recontactera
-            pour planifier un voyage inoubliable!</h4>
-        <form>
-            <label for="name">Nom&nbsp;:</label>
-            <input type="text" id="name" name="user_name" />
-            <label for="mail">E-mail&nbsp;:</label>
-            <input type="email" id="mail" name="user_mail" />
-            <label for="msg">Message&nbsp;:</label>
-            <textarea id="msg" name="user_message"></textarea>
-            <button type="submit" class="submitButton">Envoyer </button>
-
-
-        </form>
-        <button class="try again" name="try again">Générer une nouvelle destination</button>
+    -->
     </section>
-    <div><img src="Ressources/décor.png"></div>
+    <script src="script.js"></script>
+
 </body>
-<script src="script.js"></script>
 
 </html>
