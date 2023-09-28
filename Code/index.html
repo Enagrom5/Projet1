@@ -11,7 +11,8 @@
 <body>
     <nav>
 
-        <img src="../assets/logo/LOGO.png" alt="logo" name="logo" />
+        <img src="../assets/logo/LOGO.png" alt="logo" name="logo" width="5%" />
+        <h2 class="slogan"> BADTRIP.ADVISOR</h2>
 
         <ul>
             <li>
@@ -28,15 +29,34 @@
             </li>
         </ul>
     </nav>
-
-    <section class="Questions"></section>
     
+    <section clas="startQuiz">
+        <button class="buttonStart"> Démarrez le quiz!</button>
+    </section>
 
-    <section class="destination">
-        <h2>Félicitation! Voici la destination de tes rêves:</h2>
+    <section class="Questions"> <!-- Bloc incorporant la question et les réponses -->
+        <div class="Question"> <!-- bloc question -->
+            <h4 class="question"></h4>
+        </div>
+
+        <div class="answers"> <!-- bloc réponse A -->
+            <button class="cardAnswerA">
+                <h4 class="answerA"><b></b></h4>
+            </button>
+
+            <button class="cardAnswerB"> <!-- bloc réponse B -->
+                <h4 class="answerB"><b></b></h4>
+            </button>
+        </div>
+        </div>
 
     </section>
+    <!-- 
+    <section class="destination">
+        <h2>Félicitation! Voici la destination de tes rêves:</h2>
+    -->
+    </section>
+    <script src="script.js"></script>
 </body>
-<script src="script.js"></script>
 
 </html>
