@@ -236,74 +236,73 @@ console.log(randomNumber);
 const destinationList = [{
     name: "Un monatère",
     description: "Connu pour leur fête, les moines vous assureront un séjour inoubliable en vous contant les histoires les plus palpitantes!",
-    img: "",
+    img: "../assets/Destination/monasteredusilence.jpg",
 },
 {
     name: "Le Mordor",
-    description: "Bein connu pour sa population un poil rustique, et ses paysages luxuriants, le Mordor est un pays ou il fait bon vivre. C'est la saison idéale! Après il fera un peu trop froid.",
-    img: "",
+    description: "Bien connu pour sa population un poil rustique, et ses paysages luxuriants, le Mordor est un pays ou il fait bon vivre. C'est la saison idéale! Après il fera un peu trop froid.",
+    img: "../assets/Destination/mordor1.jpg",
 },
 {
     name: "Hoth la planète de glace",
     description: "Attendez vous à une expérience chaleureuse! La cuisine locale vous coupera le souffle!",
-    img: "",
+    img: "../assets/Destination/hothplanet.jpg",
 },
 {
     name: "Bergerie dans le Larzac",
     description: "Pour se reposer quoi de mieux que le travail de la terre!",
-    img: "",
+    img: "../assets/Destination/bergeriedepierre.jpg",
 },
 {
     name: "Azkaban",
     description: "The place to be pour profiter de toute la liberté possible!",
-    img: "",
+    img: "../assets/Destination/Azkaban.png",
 },
 {
     name: "Le monde des télétubbies",
     description: "Endroit paisible et calme. Vous pourrez observer en toute tranquillité les autochtones",
-    img: "",
+    img: "../assets/Destination/teletubbies1.jpg",
 },
 {
     name: "Centre de désintoxication",
     description: "Dernier lieu à la mode pour partir en vacances. Méfiance tout de même n'accepter aucune pilule qu'on vous proposerait!",
-    img: "",
+    img: "../assets/Destination/centredesintox.jpg",
 },
 {
     name: "Camping nudiste",
     description: "Si vous aimez les séjours simples, celui ci est fait pour vous. Attention Sortez couvert!",
-    img: "",
+    img: "../assets/Destination/plagenudiste1.jpg",
 },
 {
     name: "Bivouac chez les marcheurs blancs",
     description: "Qui n'a jamais rêvé de franchir le mur? Ce bivouac est fait pour vous.",
-    img: "",
+    img: "../assets/Destination/beyondthewall.png",
 },
 {
     name: "Séjour linguistique chez les Goa'uld ",
     description: "Population extrmement amicale, avec eux c'est presque symbiotique. Veillez à ne pas en ramener un en rentrant!",
-    img: "",
+    img: "../assets/Destination/stargate.jpg",
 },
 {
     name: "Hôtel Cortez",
     description: "",
-    img: "",
+    img: "../assets/Destination/hotelcortez.png",
 },
 {
     name: "Le Tartare",
     description: "Un incroyable supplice!",
-    img: "",
+    img: "../assets/Destination/tartare.png",
 },
 {
     name: "Hôpital psychitrique Ashecliffe",
     description: "Tellement intense qu'on en perd la boule!",
-    img: "",
+    img: "../assets/Destination/shutterisland.png",
 },
 {
     name: "Croisière sur le Titanic",
     description: "Profitez de leur animation, les pieds dans l'eau!",
     img: "",
-}
-]
+}]
 
 
 
@@ -322,7 +321,7 @@ buttonResult.addEventListener("click", function () {
     buttonContainer.style.display = "none";
     destination.style.display = "flex";
     titre.textContent = `${destinationList[randomNumber].name}`;
-    //destinationImage.textContent=`${destinationList[randomNumber].img}`;
+    destinationImage.src=`${destinationList[randomNumber].img}`;
     destinationDescription.textContent = `${destinationList[randomNumber].description}`;
 
 })
