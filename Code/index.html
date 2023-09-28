@@ -28,25 +28,34 @@
             </li>
         </ul>
     </nav>
-
+    <div class="decorTop"><img src="Ressources/décor.png" alt="décor"></div>
     <section class="questions">
-
+       
     </section>
-    <span class="button-container"><button class="button-result" type="button">Découvrir votre destination!</button></span>
+    <span class="button-container"><button class="button-result" type="button">Découvrir votre
+            destination!</button></span>
 
     <section class="destination">
         <h2>Félicitation! Voici la destination de tes rêves:</h2>
         <h3 class="titreDestination"></h3>
         <img class="destinationImage">
         <p class="destinationDescription"></p>
+        <h4>Si cette destination vous convient. Merci de remplir ce formulaire. Notre équipe de choc vous recontactera
+            pour planifier un voyage inoubliable!</h4>
+        <form>
+            <label for="name">Nom&nbsp;:</label>
+            <input type="text" id="name" name="user_name" />
+            <label for="mail">E-mail&nbsp;:</label>
+            <input type="email" id="mail" name="user_mail" />
+            <label for="msg">Message&nbsp;:</label>
+            <textarea id="msg" name="user_message"></textarea>
+            <button type="submit" class="submitButton">Envoyer </button>
 
-        <fom>
-            <label>
-                
-            </label>
-        </fom>
 
+        </form>
+        <button class="try again" name="try again">Générer une nouvelle destination</button>
     </section>
+    <div><img src="Ressources/décor.png"></div>
 </body>
 <script src="script.js"></script>
 
