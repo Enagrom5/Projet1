@@ -1,3 +1,6 @@
+const buttonStart = document.querySelector(".start");
+
+
 const questions = document.querySelector('.questions');
 
 /**
@@ -231,7 +234,7 @@ console.log(calculNumber);
 
 
 /* Tableau pour les destinations*/
-let randomNumber = Math.floor(Math.random() * 15);
+let randomNumber = Math.floor(Math.random() * 14);
 console.log(randomNumber);
 const destinationList = [{
     name: "Un monatère",
@@ -301,13 +304,13 @@ const destinationList = [{
 {
     name: "Croisière sur le Titanic",
     description: "Profitez de leur animation, les pieds dans l'eau!",
-    img: "",
+    img: "../assets/Destination/titanic2.jpg",
 }]
 
 
 
 /**
- * afficher la page des résultats 
+ * CHANGER LES PAGES 
  *  */
 const destination = document.querySelector(".destination");
 const buttonContainer = document.querySelector(".button-container");
@@ -315,19 +318,49 @@ const buttonResult = document.querySelector(".button-result");
 const titre = document.querySelector(".titreDestination");
 const destinationImage = document.querySelector(".destinationImage");
 const destinationDescription = document.querySelector(".destinationDescription");
+const buttonRestart = document.querySelector(".try-again")
+const accueil = document.querySelector(".accueil")
+buttonResult.style.display = "none";
+/**
+ * accueil => quiz 
+ *  */
+buttonStart.addEventListener("click", function () {
+    questions.style.display = "block";
+    buttonContainer.style.display = "flex";
+    destination.style.display = "none";
+    buttonStart.style.display = "none";
+    buttonResult.style.display = "flex";
 
+})
+/**
+ * quiz => result 
+ *  */
 buttonResult.addEventListener("click", function () {
     questions.style.display = "none";
     buttonContainer.style.display = "none";
     destination.style.display = "flex";
     titre.textContent = `${destinationList[randomNumber].name}`;
-    destinationImage.src=`${destinationList[randomNumber].img}`;
+    destinationImage.src = `${destinationList[randomNumber].img}`;
     destinationDescription.textContent = `${destinationList[randomNumber].description}`;
 
 })
-
 const submitButton = document.querySelector(".submitButton");
 
 submitButton.addEventListener("click", function () {
     alert("Merci de votre intéret. Nos équipes reviendront vers vous au plus vite!")
+    event.preventDefault()
 });
+/**
+ * result => accueil 
+ *  */
+buttonRestart.addEventListener("click", function () {
+    questions.style.display = "none";
+    buttonContainer.style.display = "none";
+    destination.style.display = "none";
+    buttonRestart.style.display = "none";
+    accueil.style.display = "flex";
+    buttonStart.style.display = "flex";
+
+
+})
+
