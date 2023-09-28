@@ -7,7 +7,10 @@
     margin: 0;
     font-family: "Inter", sans-serif;
 }
-
+body{
+   
+    background-color: #151515;
+}
 /*NAVBAR*/
 @font-face {
     font-family: "Inter";
@@ -19,6 +22,7 @@ nav {
     background-color: #434242;
     color: azure;
     width: 100%;
+    height: 6rem;
 }
 
 nav ul,
@@ -43,15 +47,22 @@ nav img {
     transform: rotate(180deg);
     flex-direction: row;
 }
-body{
-    grid-template-rows: auto 1fr auto;
-    height: 100vh;
-    background-color: #151515;
+.decorBottom{
+    display: flex;
+    flex-direction: ;
 }
 
+.accueil{display: flex;
+justify-content: center;
+height: 100%;
+align-items: center;}
+.questions{
+    display: none;
+}
 .question {
     display: flex;
     justify-content: center;
+    padding-top: -200vh;
     padding: 3rem;
     color: white;
 }
@@ -110,7 +121,8 @@ body{
     
 }
 
-.button-result {
+.button-result, .start {
+    display: none;
     color: aliceblue;
     background-color: #00ac9e;
     display: flex;
@@ -118,7 +130,9 @@ body{
     padding: 2rem;
     margin: 2rem;
 }
-
+.start{
+margin: 31vh;
+}
 .destination {
     display:flex;
     flex-direction: column;
