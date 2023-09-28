@@ -38,15 +38,15 @@ nav img {
 
 
 /* BODY*/
+.decorTop{
+    display: flex;
+    transform: rotate(180deg);
+    flex-direction: row;
+}
 body{
     grid-template-rows: auto 1fr auto;
     height: 100vh;
     background-color: #151515;
-}
-.questions{
-    
-    
- 
 }
 
 .question {
@@ -59,8 +59,7 @@ body{
 .button1,
 .button2 {
     padding: 0;
-    border-radius: 15px;
-    border-color: 151515;
+    border-color: #929190c1;
     background-color: #E9B872;
 }
 
@@ -74,6 +73,10 @@ body{
 .cards-containers {
     display: flex;
     justify-Content: space-around;
+    
+}
+.card-container1,.card-container2{
+    box-shadow: -3px -3px 10px 2px #929190c1;
 }
 
 .img1,
@@ -104,7 +107,7 @@ body{
 .button-container {
     display: flex;
     justify-content: center;
-    background-color: #151515;
+    
 }
 
 .button-result {

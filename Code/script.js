@@ -7,13 +7,7 @@ const questions = document.querySelector('.questions');
  */
 
 const questionReponse = [
-    {
-        question: "Musée ou Bronzage?",
-        picture1: "../assets/woman-1283009_640.jpg",
-        picture2: "../assets/bronzage.jpg",
-        reponse1: "Musée",
-        reponse2: "Bronzage",
-    },
+
     {
         question: "Blockbuster ou Film d'auteur?",
         picture1: "../assets/ai-generated-8229798_640.jpg",
@@ -27,7 +21,6 @@ const questionReponse = [
         picture2: "../assets/froid.jpg",
         reponse1: "Chaud",
         reponse2: "Froid",
-        id: "question3"
     },
     {
         question: "Plage ou Montagne?",
@@ -190,167 +183,170 @@ function createCard(quest, image1Url, image2Url, reponse1, reponse2) {
     footer2.innerHTML = reponse2;
     button2.appendChild(footer2);
 
-
+    return [button1, button2];
 }
-
-
 
 
 for (const element of questionReponse) {
-    //button1, button2// 
+
     createCard(element.question, element.picture1, element.picture2, element.reponse1, element.reponse2);
+
+
 }
+let calculNumber = 0;
+const button1 = document.querySelectorAll(".button1");
+const button2 = document.querySelectorAll(".button2");
+for (let i = 0; i < button1.length; i++) {
+    button1[i].addEventListener("click", function () {
+        calculNumber += 2
+        console.log(calculNumber)
+    },
+    )}
+
+    for (let i = 0; i < button2.length; i++) {
+        button2[i].addEventListener("click", function () {
+            calculNumber += 5
+            console.log(calculNumber)
+        },
+        )}
+
+ 
+ console.log(calculNumber);
+
+
+    /**
+     * VCalcul des scores
+     */
 
 
 
-/**
- * Version 2 avec l'affichage d'une question par une question
- */
-// let i = 0;
-
-// function next(i) {
-//     return i + 1
-// }
 
 
-// while (i < questionReponse.length) {
-
-//     createCard(questionReponse[i].question, questionReponse[i].picture1, questionReponse[i].picture2, questionReponse[i].reponse1, questionReponse[i].reponse2);
-
-//     // créer un bouton, qui permet d'incrementer i pour afficher la question d'après
-//     i++;
-// }
-
-/**
- * Version 1 OPE mais affiche toutes les questions.
- */
+    /**
+     * Version 2 avec l'affichage d'une question par une question
+     */
 
 
 
-// ---------------------------------------------------
+    // let i = 0;
+    // let buttons;
+    // do {
+    //     buttons = createCard(questionReponse[i].question, questionReponse[i].picture1, questionReponse[i].picture2, questionReponse[i].reponse1, questionReponse[i].reponse2);
+    //     console.log(buttons)
+    //     // créer un bouton, qui permet d'incrementer i pour afficher la question d'après
+    //     buttons[0].addEventListener("click", function () { i += 1; });
+    //     buttons[1].addEventListener("click", function () { i += 1; });
+    // } while (i < questionReponse.length);
+
+    /**
+     * Version 1 OPE mais affiche toutes les questions.
+     */
 
 
-/* let questionActuelleIndex = 0;
 
-const displayNextQuestion = () => {
-    if (currentQuestionIndex < questionReponse.length) {
-        const {question, picture1, picture2, reponse1, reponse2} = questionReponse[questionActuelleIndex]
-        createCard(question, picture1, picture2, reponse1, reponse2);
-        questionActuelleIndex++
-    } else {
-        console.log("Tu as répondu à tout")
+    // ---------------------------------------------------
+
+
+
+
+
+    /* Tableau pour les destinations*/
+    let randomNumber = Math.floor(Math.random() * 15);
+    console.log(randomNumber);
+    const destinationList = [{
+        name: "Un monatère",
+        description: "Connu pour leur fête, les moines vous assureront un séjour inoubliable en vous contant les histoires les plus palpitantes!",
+        img: "",
+    },
+    {
+        name: "Le Mordor",
+        description: "Bein connu pour sa population un poil rustique, et ses paysages luxuriants, le Mordor est un pays ou il fait bon vivre. C'est la saison idéale! Après il fera un peu trop froid.",
+        img: "",
+    },
+    {
+        name: "Hoth la planète de glace",
+        description: "Attendez vous à une expérience chaleureuse! La cuisine locale vous coupera le souffle!",
+        img: "",
+    },
+    {
+        name: "Bergerie dans le Larzac",
+        description: "Pour se reposer quoi de mieux que le travail de la terre!",
+        img: "",
+    },
+    {
+        name: "Azkaban",
+        description: "The place to be pour profiter de toute la liberté possible!",
+        img: "",
+    },
+    {
+        name: "Le monde des télétubbies",
+        description: "Endroit paisible et calme. Vous pourrez observer en toute tranquillité les autochtones",
+        img: "",
+    },
+    {
+        name: "Centre de désintoxication",
+        description: "Dernier lieu à la mode pour partir en vacances. Méfiance tout de même n'accepter aucune pilule qu'on vous proposerait!",
+        img: "",
+    },
+    {
+        name: "Camping nudiste",
+        description: "Si vous aimez les séjours simples, celui ci est fait pour vous. Attention Sortez couvert!",
+        img: "",
+    },
+    {
+        name: "Bivouac chez les marcheurs blancs",
+        description: "Qui n'a jamais rêvé de franchir le mur? Ce bivouac est fait pour vous.",
+        img: "",
+    },
+    {
+        name: "Séjour linguistique chez les Goa'uld ",
+        description: "Population extrmement amicale, avec eux c'est presque symbiotique. Veillez à ne pas en ramener un en rentrant!",
+        img: "",
+    },
+    {
+        name: "Hôtel Cortez",
+        description: "",
+        img: "",
+    },
+    {
+        name: "Le Tartare",
+        description: "Un incroyable supplice!",
+        img: "",
+    },
+    {
+        name: "Hôpital psychitrique Ashecliffe",
+        description: "Tellement intense qu'on en perd la boule!",
+        img: "",
+    },
+    {
+        name: "Croisière sur le Titanic",
+        description: "Profitez de leur animation, les pieds dans l'eau!",
+        img: "",
     }
-}
-
-displayNextQuestion()
-
-*/
-
-
-// ---------------------------------------------------//
+    ]
 
 
 
+    /* afficher la page des résultats*/
+    const destination = document.querySelector(".destination");
+    const buttonContainer = document.querySelector(".button-container");
+    const buttonResult = document.querySelector(".button-result");
+    const titre = document.querySelector(".titreDestination");
+    const destinationImage = document.querySelector(".destinationImage");
+    const destinationDescription = document.querySelector(".destinationDescription");
 
-/* Tableau pour les destinations*/
-let randomNumber=Math.floor(Math.random() * 15);
-console.log(randomNumber);
-const destinationList =[{
-    name: "Un monatère",
-    description: "Connu pour leur fête, les moines vous assureront un séjour inoubliable en vous contant les histoires les plus palpitantes!",
-    img:"",
-} ,
-{
-    name: "Le Mordor",
-    description: "Bein connu pour sa population un poil rustique, et ses paysages luxuriants, le Mordor est un pays ou il fait bon vivre. C'est la saison idéale! Après il fera un peu trop froid.",
-    img:"",
-},
-{
-    name: "Hoth la planète de glace",
-    description: "Attendez vous à une expérience chaleureuse! La cuisine locale vous coupera le souffle!",
-    img:"",
-},
-{
-    name: "Bergerie dans le Larzac",
-    description: "Pour se reposer quoi de mieux que le travail de la terre!",
-    img:"",
-},
-{
-    name: "Azkaban",
-    description: "The place to be pour profiter de toute la liberté possible!",
-    img:"",
-},
-{
-    name: "Le monde des télétubbies",
-    description: "Endroit paisible et calme. Vous pourrez observer en toute tranquillité les autochtones",
-    img:"",
-},
-{
-    name: "Centre de désintoxication",
-    description: "Dernier lieu à la mode pour partir en vacances. Méfiance tout de même n'accepter aucune pilule qu'on vous proposerait!",
-    img:"",
-},
-{
-    name: "Camping nudiste",
-    description: "Si vous aimez les séjours simples, celui ci est fait pour vous. Attention Sortez couvert!",
-    img:"",
-},
-{
-    name: "Bivouac chez les marcheurs blancs",
-    description: "Qui n'a jamais rêvé de franchir le mur? Ce bivouac est fait pour vous.",
-    img:"",
-},
-{
-    name: "Séjour linguistique chez les Goa'uld ",
-    description: "Population extrêmement amicale, avec eux c'est presque symbiotique. Veillez à ne pas en ramener un en rentrant!",
-    img:"",
-},
-{
-    name: "Hôtel Cortez",
-    description: "",
-    img:"",
-},
-{
-    name: "Le Tartare",
-    description: "Un incroyable supplice!",
-    img:"",
-},
-{
-    name: "Hôpital psychitrique Ashecliffe",
-    description: "Tellement intense qu'on en perd la boule!",
-    img:"",
-},
-{
-    name: "Croisière sur le Titanic",
-    description: "Profitez de leur animation, les pieds dans l'eau!",
-    img:"",
-}
-]
+    buttonResult.addEventListener("click", function () {
+        questions.style.display = "none";
+        buttonContainer.style.display = "none";
+        destination.style.display = "flex";
+        titre.textContent = `${destinationList[randomNumber].name}`;
+        //destinationImage.textContent=`${destinationList[randomNumber].img}`;
+        destinationDescription.textContent = `${destinationList[randomNumber].description}`;
 
+    })
 
+    const submitButton = document.querySelector(".submitButton");
 
-/* afficher la page des résultats*/
-const destination = document.querySelector(".destination");
-const buttonContainer = document.querySelector(".button-container");
-const buttonResult = document.querySelector(".button-result");
-const titre=document.querySelector(".titreDestination");
-const destinationImage=document.querySelector(".destinationImage");
-const destinationDescription=document.querySelector(".destinationDescription");
-
-buttonResult.addEventListener("click", function () {
-    questions.style.display = "none";
-    buttonContainer.style.display = "none";
-    destination.style.display = "flex";
-    titre.textContent=`${destinationList[randomNumber].name}`;
-    //destinationImage.textContent=`${destinationList[randomNumber].img}`;
-    destinationDescription.textContent=`${destinationList[randomNumber].description}`;
-
-})
-
-const submitButton= document.querySelector(".submitButton");
-
-submitButton.addEventListener("click",function(){
-    alert("Merci de votre intéret. Nos équipes reviendront vers vous au plus vite!")
-})
-
-
+    submitButton.addEventListener("click", function () {
+        alert("Merci de votre intéret. Nos équipes reviendront vers vous au plus vite!")
+    });
