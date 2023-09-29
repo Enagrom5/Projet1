@@ -35,116 +35,55 @@ li {
 }
 
 nav img {
-    padding-left: 4rem;
+    margin-left: 1rem;
 }
 
-
-
+h2.slogan{
+    margin-top: 2vh;
+    color: #00ac9e;
+}
 
 /* BODY*/
-.decorTop{
-    display: flex;
-    transform: rotate(180deg);
-    flex-direction: row;
-}
-.decorBottom{
-    display: flex;
-    flex-direction: ;
-}
 
-.accueil{display: flex;
-justify-content: center;
-height: 100%;
-align-items: center;}
-.questions{
-    display: none;
-}
-.question {
+body {
     display: flex;
-    justify-content: center;
-    padding-top: -200vh;
-    padding: 3rem;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    background-color: #151515;
     color: white;
 }
 
-.button1,
-.button2 {
-    padding: 0;
-    border-color: #929190c1;
-    background-color: #E9B872;
-}
-
-.questionContainer {
+.questions{
     display: flex;
-    flex-direction: column;
-    padding-bottom: 5rem;
-
-}
-
-.cards-containers {
-    display: flex;
-    justify-Content: space-around;
-    
-}
-.card-container1,.card-container2{
-    box-shadow: -3px -3px 10px 2px #929190c1;
-}
-
-.img1,
-.img2 {
-    border-radius: 5px;
-}
-.image-animation {
-    transition: opacity 0.3s ease-in-out;
-}
-
-.image-animation:hover {
-    opacity: 0.8;
-}
-
-.image-selected {
-    border: 2px solid hsl(35, 73%, 68%); 
-}
-
-.image-clicked {
-    transform: scale(0.9);
-}
-.footer1,
-.footer2 {
-    border-radius: 5px;
-    background-color: #E9B872
-}
-
-.button-container {
-    display: flex;
-    justify-content: center;
-    
-}
-
-.button-result, .start {
-    display: none;
-    color: aliceblue;
-    background-color: #00ac9e;
-    display: flex;
-    justify-content: center;
-    padding: 2rem;
-    margin: 2rem;
-}
-.start{
-margin: 31vh;
-}
-.destination {
-    display:flex;
-    flex-direction: column;
-    justify-content: space-around;
     align-items: center;
-    background-color: #151515;
-    color: azure;
-    display: none;
-    height: 100vh;
-}
-form{
-    display: grid;
-    grid-template-rows: 1fr,1fr,1fr;
 }
 
+ .question{
+    text-align: center;
+    padding: 1rem;
+    color: white;
+    font-size: larger;
+}
+
+.cardQuestion {
+    align-items: center;
+}
+
+.answers {
+    display: flex;
+    justify-content: space-around;
+    gap: 10rem;
+    padding: 0rem 0rem;
+}
+.answers > button {
+    background-color: #151515;
+    height: 27rem;
+    width: 35rem;
+    background-size: cover;
+    border-radius: 3%;
+    box-shadow: 10px 10px 30px rgb(8, 8, 8),
+    -10px -10px 30px rgb(60, 60, 60);
+    margin: Orem 5rem;
+
+}
