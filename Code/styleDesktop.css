@@ -7,15 +7,19 @@
     margin: 0;
     font-family: "Inter", sans-serif;
 }
-body{
-   
+
+body {
+
     background-color: #151515;
+    height: auto;
 }
+
 /*NAVBAR*/
 @font-face {
     font-family: "Inter";
-    src: ../fonts/ ;
+    src: ../fonts/;
 }
+
 nav {
     display: flex;
     justify-content: space-between;
@@ -42,23 +46,28 @@ nav img {
 
 
 /* BODY*/
-.decorTop{
+.decorTop {
     display: flex;
     transform: rotate(180deg);
     flex-direction: row;
 }
-.decorBottom{
+
+.decorBottom {
     display: flex;
     flex-direction: ;
 }
 
-.accueil{display: flex;
-justify-content: center;
-height: 100%;
-align-items: center;}
-.questions{
+.accueil {
+    display: flex;
+    justify-content: center;
+    height: 100%;
+    align-items: center;
+}
+
+.questions {
     display: none;
 }
+
 .question {
     display: flex;
     justify-content: center;
@@ -84,9 +93,11 @@ align-items: center;}
 .cards-containers {
     display: flex;
     justify-Content: space-around;
-    
+
 }
-.card-container1,.card-container2{
+
+.card-container1,
+.card-container2 {
     box-shadow: -3px -3px 10px 2px #929190c1;
 }
 
@@ -94,6 +105,7 @@ align-items: center;}
 .img2 {
     border-radius: 5px;
 }
+
 .image-animation {
     transition: opacity 0.3s ease-in-out;
 }
@@ -103,12 +115,13 @@ align-items: center;}
 }
 
 .image-selected {
-    border: 2px solid hsl(35, 73%, 68%); 
+    border: 2px solid hsl(35, 73%, 68%);
 }
 
 .image-clicked {
     transform: scale(0.9);
 }
+
 .footer1,
 .footer2 {
     border-radius: 5px;
@@ -118,33 +131,47 @@ align-items: center;}
 .button-container {
     display: flex;
     justify-content: center;
-    
+
 }
 
-.button-result, .start {
+.button-result,
+.start {
     display: none;
     color: aliceblue;
     background-color: #00ac9e;
     display: flex;
     justify-content: center;
-    padding: 2rem;
+    padding: 4rem;
     margin: 2rem;
+    font-size: x-large
 }
-.start{
-margin: 31vh;
+
+.start {
+    margin: 25vh;
+
+
 }
+
+.try-again {
+    padding: 2rem;
+    background-color: #00ac9e;
+    color: aliceblue;
+}
+
 .destination {
-    display:flex;
+    display: flex;
     flex-direction: column;
-    justify-content: space-around;
+    gap: 2rem;
     align-items: center;
     background-color: #151515;
     color: azure;
     display: none;
     height: 100vh;
-}
-form{
-    display: grid;
-    grid-template-rows: 1fr,1fr,1fr;
+    height: auto;
 }
 
+form {
+    display: grid;
+    grid-template-rows: 1fr, 1fr, 1fr;
+
+}

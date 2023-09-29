@@ -268,7 +268,7 @@ const destinationList = [{
 },
 {
     name: "Centre de désintoxication",
-    description: "Dernier lieu à la mode pour partir en vacances. Méfiance tout de même n'accepter aucune pilule qu'on vous proposerait!",
+    description: "Dernier lieu à la mode pour partir en vacances. Méfiance tout de même n'acceptez aucune pilule qu'on vous proposerait!",
     img: "../assets/Destination/centredesintox.jpg",
 },
 {
@@ -283,12 +283,12 @@ const destinationList = [{
 },
 {
     name: "Séjour linguistique chez les Goa'uld ",
-    description: "Population extrmement amicale, avec eux c'est presque symbiotique. Veillez à ne pas en ramener un en rentrant!",
+    description: "Population extrêmement amicale, avec eux c'est presque symbiotique. Veillez à ne pas en ramener un en rentrant!",
     img: "../assets/Destination/stargate.jpg",
 },
 {
     name: "Hôtel Cortez",
-    description: "",
+    description: "Séjour à vous glacer le sang! Showcase de Lady Gaga",
     img: "../assets/Destination/hotelcortez.png",
 },
 {
