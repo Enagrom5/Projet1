@@ -1,366 +1,76 @@
-const buttonStart = document.querySelector(".start");
 
+const questionsArray = ["Jour ou Nuit?", "Sport ou Sieste?","Musée ou bronzer?","Blockbuster ou film d'auteur?","Trop chaud ou trop froid?","Plage ou montagne?","Classique ou Métal?","Bière ou vin?","Sucré ou salé?","Humain ou robot?","Livre ou télé?","PC ou console?","Windows ou Linux?","Legolas ou Gimli?","Pilule rouge ou pilule bleue?"]; 
+// Tableau des questions
+// const reponseAArray = ["Jour", "Sport"]; - Tableau des txt réponses A
+// const reponseBArray = ["Nuit", "Sieste"]; - Tableau des txt réponses B
+const imagesA = ["url('../assets/jour.jpg')", "url('../assets/sport.jpg')","url('../assets/musee.jpg')", "url('../assets/blockbuster.jpg')","url('../assets/chaud.jpg')", "url('../assets/plage.jpg')", "url('../assets/classique.jpg')","url('../assets/biere.jpg')", "url('../assets/sucre.jpg')", "url('../assets/humain.jpg')","url('../assets/livre.jpg')", "url('../assets/pc.jpg')", "url('../assets/windows.png')", "url('../assets/legolas.jpg')", "url('../assets/rouge.jpg')"] 
+// Tableau des images A
+const imagesB = ["url('../assets/nuit.jpg')", "url('../assets/sieste.jpg')","url('../assets/bronzage.jpg')", "url('../assets/auteur.jpg')","url('../assets/froid.jpg')", "url('../assets/montagne.jpg')", "url('../assets/metal.jpg')","url('../assets/vin.jpg')", "url('../assets/sale.jpg')", "url('../assets/robot.jpg')","url('../assets/tele.jpg')", "url('../assets/console.jpg')", "url('../assets/linux.jpg')", "url('../assets/gimli.jpg')", "url('../assets/bleu.jpg')"] 
+// Tableau des images B
 
-const questions = document.querySelector('.questions');
+const question = document.querySelector('.question'); // Sélectionne en JS la balise question
+const reponseA = document.querySelector('.cardAnswerA'); // Sélectionne en JS la balise réponse A
+const reponseB = document.querySelector('.cardAnswerB'); // Sélectionne JS la balise réponse B
+const buttonStart = document.querySelector('.buttonStart')
+
+let i = 0;
 
 /**
- * Toutes les questions
+ * Fonction qui permet la suppression du bouton "démarrer le quiz"
  */
+function removeButton(){
+ buttonStart.remove();
+ reponseA.style.display= "block";
+ reponseB.style.display= "block"
+ question.style.display= "block";
+ displayQuestion(i);
+}
 
-const questionReponse = [
+/**
+ * Fonction qui permet de passer à la question suivante
+ */
+function displayQuestion(idQuestion) {
+    question.innerHTML = questionsArray[idQuestion];  // Affiche la question dans le tableau questionsArray
+    //reponseA.innerHTML = reponseAArray[idQuestion]; - Affiche le texte de la réponse A via le tableau des txt réponses A
+    //reponseB.innerHTML = reponseBArray[idQuestion]; - Affiche le texte de la réponse B via le tableau des txt réponses B
+    reponseA.style.backgroundImage = imagesA[idQuestion]; // Affiche l'image A dans le cadre A via le tableau des images A
+    reponseB.style.backgroundImage = imagesB[idQuestion]; // Affiche l'image B dans le cadre B via le tableau des images B
+}
+/**
+ * Suppression du bouton de lancement de quiz
+ */
+buttonStart.addEventListener('click', function() {
+    removeButton();
+})
+/**
+ * Passe à la question suivante (bouton A)
+ */
+reponseA.addEventListener('click', function () {
+    // permet de passer à la question suivante
+    i++;
 
-    {
-        question: "Musée ou Bronzage?",
-        picture1: "../assets/woman-1283009_640.jpg",
-        picture2: "../assets/bronzage.jpg",
-        reponse1: "Musée",
-        reponse2: "Bronzage",
-
-    },
-    {
-        question: "Blockbuster ou Film d'auteur?",
-        picture1: "../assets/ai-generated-8229798_640.jpg",
-        picture2: "../assets/main-tenue-clap-devant-aimer-mime-couple.jpg",
-        reponse1: "Blockbuster",
-        reponse2: "Film d'auteur",
-
-    },
-    {
-        question: "Chaud ou Froid?",
-        picture1: "../assets/chaud.jpg",
-        picture2: "../assets/froid.jpg",
-        reponse1: "Chaud",
-        reponse2: "Froid",
-    },
-    {
-        question: "Plage ou Montagne?",
-        picture1: "../assets/plage.jpg",
-        picture2: "../assets/montagne.jpg",
-        reponse1: "Plage",
-        reponse2: "Montagne",
-    },
-    {
-        question: "Bière ou Vin?",
-        picture1: "../assets/biere.jpg",
-        picture2: "../assets/vin.jpg",
-        reponse1: "Bière",
-        reponse2: "Vin",
-    },
-    {
-        question: "Sucré ou Salé?",
-        picture1: "../assets/sucre.jpg",
-        picture2: "../assets/sale.jpg",
-        reponse1: "Sucré",
-        reponse2: "Salé",
-    },
-    {
-        question: "Humain ou Robot?",
-        picture1: "../assets/humain.jpg",
-        picture2: "../assets/robot.jpg",
-        reponse1: "Humain",
-        reponse2: "Robot",
-    },
-    {
-        question: "Livre ou Télé?",
-        picture1: "../assets/Livre.jpg",
-        picture2: "../assets/tele.jpg",
-        reponse1: "Livre",
-        reponse2: "Télé",
-    },
-    {
-        question: "PC ou Console?",
-        picture1: "../assets/pc.jpg",
-        picture2: "../assets/console.jpg",
-        reponse1: "PC",
-        reponse2: "Console",
-    },
-    {
-        question: "Windows ou Linux?",
-        picture1: "../assets/windows.png",
-        picture2: "../assets/linux.jpg",
-        reponse1: "Windows",
-        reponse2: "Linux",
-    },
-    {
-        question: "Legolas ou Gimli?",
-        picture1: "../assets/legolas.jpg",
-        picture2: "../assets/guimli.jpg",
-        reponse1: "Legolas",
-        reponse2: "Gimli",
-    },
-    {
-        question: "Pilule Rouge ou Pilule Bleue?",
-        picture1: "../assets/rouge.jpg",
-        picture2: "../assets/bleu.jpg",
-        reponse1: "Pilule Rouge",
-        reponse2: "Pilule Bleue",
-    },
-    {
-        question: "Jour ou Nuit?",
-        picture1: "../assets/jour.jpg",
-        picture2: "../assets/nuit.jpg",
-        reponse1: "Jour",
-        reponse2: "Nuit",
-    },
-    {
-        question: "Java ou Javascript?",
-        picture1: "../assets/java.jpg",
-        picture2: "../assets/js.jpg",
-        reponse1: "Java",
-        reponse2: "Javascript",
-    },
-    {
-        question: "Sport ou Sieste?",
-        picture1: "../assets/sport.jpg",
-        picture2: "../assets/sieste.jpg",
-        reponse1: "Sport",
-        reponse2: "Sieste",
+    if (i < questionsArray.length) {
+        displayQuestion(i);
+    } else {
+        // tu affiches la destination de rêve !
     }
-]
+})
 
 /**
- * La fonction createCard, permet de créer une carte en fonction des parametres reçu
+ * Passe à la question suivante (bouton B)
  */
+reponseB.addEventListener('click', function () {
+    // permet de passer à la question suivante
+    i++;
 
-function createCard(quest, image1Url, image2Url, reponse1, reponse2) {
-
-    const questionContainer = document.createElement("div");
-    questionContainer.classList.add("questionContainer");
-    questions.appendChild(questionContainer);
-
-    const question = document.createElement("h2");
-    question.classList.add("question")
-    question.textContent = quest;
-    questionContainer.appendChild(question);
-
-    const cardsContainers = document.createElement("span");
-    cardsContainers.classList.add("cards-containers");
-    questionContainer.appendChild(cardsContainers);
-
-    const cardContainer1 = document.createElement("span");
-    cardContainer1.classList.add("card-container1");
-    cardsContainers.appendChild(cardContainer1);
-
-    const cardContainer2 = document.createElement("span");
-    cardContainer2.classList.add("card-container2");
-    cardsContainers.appendChild(cardContainer2);
-
-    const cardContainerBody1 = document.createElement("div");
-    cardContainerBody1.classList.add("containerbody1");
-    cardContainer1.appendChild(cardContainerBody1);
-
-
-    const button1 = document.createElement("button");
-    button1.classList.add("button1");
-    cardContainerBody1.appendChild(button1);
-
-    const img1 = document.createElement("img");
-    img1.src = `${image1Url}`;
-    img1.alt = reponse1;
-    img1.classList.add("image1", "image-animation");
-    img1.addEventListener("click", () => {
-        img1.classList.toggle("image-clicked");
-        img2.classList.remove("image-clicked");
-    });
-    button1.appendChild(img1)
-
-    const footer1 = document.createElement("p");
-    footer1.classList.add("footer1");
-    footer1.innerHTML = reponse1;
-    button1.appendChild(footer1);
-
-
-    const cardContainerBody2 = document.createElement("div");
-    cardContainerBody2.classList.add("containerbody2");
-    cardContainer2.appendChild(cardContainerBody2);
-
-    const button2 = document.createElement("button");
-    button2.classList.add("button2")
-    cardContainerBody2.appendChild(button2);
-
-    const img2 = document.createElement("img");
-    img2.src = `${image2Url}`;
-    img2.alt = reponse2;
-    img2.classList.add("image2", "image-animation");
-    img2.addEventListener("click", () => {
-        img2.classList.toggle("image-clicked");
-        img1.classList.remove("image-clicked");
-    });
-    button2.appendChild(img2)
-
-    const footer2 = document.createElement("p");
-    footer2.classList.add("footer2");
-    footer2.innerHTML = reponse2;
-    button2.appendChild(footer2);
-
-    return [button1, button2];
-}
-
-/**
- * boucle pour créer les cartes de question
- */
-for (const element of questionReponse) {
-
-    createCard(element.question, element.picture1, element.picture2, element.reponse1, element.reponse2);
-
-}
-
-
-/**
- * Calcul d'un score pour trouver la destination
- */
-let calculNumber = 0;
-const button1 = document.querySelectorAll(".button1");
-const button2 = document.querySelectorAll(".button2");
-for (let i = 0; i < button1.length; i++) {
-    button1[i].addEventListener("click", function () {
-        calculNumber += 2
-
-        console.log(calculNumber)
-    },
-    )
-}
-
-for (let i = 0; i < button2.length; i++) {
-    button2[i].addEventListener("click", function () {
-        calculNumber += 5
-        console.log(calculNumber)
-    },
-    )
-}
-
-console.log(calculNumber);
-
-
-
-/* Tableau pour les destinations*/
-let randomNumber = Math.floor(Math.random() * 14);
-console.log(randomNumber);
-const destinationList = [{
-    name: "Un monatère",
-    description: "Connu pour leur fête, les moines vous assureront un séjour inoubliable en vous contant les histoires les plus palpitantes!",
-    img: "../assets/Destination/monasteredusilence.jpg",
-},
-{
-    name: "Le Mordor",
-    description: "Bien connu pour sa population un poil rustique, et ses paysages luxuriants, le Mordor est un pays ou il fait bon vivre. C'est la saison idéale! Après il fera un peu trop froid.",
-    img: "../assets/Destination/mordor1.jpg",
-},
-{
-    name: "Hoth la planète de glace",
-    description: "Attendez vous à une expérience chaleureuse! La cuisine locale vous coupera le souffle!",
-    img: "../assets/Destination/hothplanet.jpg",
-},
-{
-    name: "Bergerie dans le Larzac",
-    description: "Pour se reposer quoi de mieux que le travail de la terre!",
-    img: "../assets/Destination/bergeriedepierre.jpg",
-},
-{
-    name: "Azkaban",
-    description: "The place to be pour profiter de toute la liberté possible!",
-    img: "../assets/Destination/Azkaban.png",
-},
-{
-    name: "Le monde des télétubbies",
-    description: "Endroit paisible et calme. Vous pourrez observer en toute tranquillité les autochtones",
-    img: "../assets/Destination/teletubbies1.jpg",
-},
-{
-    name: "Centre de désintoxication",
-    description: "Dernier lieu à la mode pour partir en vacances. Méfiance tout de même n'accepter aucune pilule qu'on vous proposerait!",
-    img: "../assets/Destination/centredesintox.jpg",
-},
-{
-    name: "Camping nudiste",
-    description: "Si vous aimez les séjours simples, celui ci est fait pour vous. Attention Sortez couvert!",
-    img: "../assets/Destination/plagenudiste1.jpg",
-},
-{
-    name: "Bivouac chez les marcheurs blancs",
-    description: "Qui n'a jamais rêvé de franchir le mur? Ce bivouac est fait pour vous.",
-    img: "../assets/Destination/beyondthewall.png",
-},
-{
-    name: "Séjour linguistique chez les Goa'uld ",
-    description: "Population extrmement amicale, avec eux c'est presque symbiotique. Veillez à ne pas en ramener un en rentrant!",
-    img: "../assets/Destination/stargate.jpg",
-},
-{
-    name: "Hôtel Cortez",
-    description: "",
-    img: "../assets/Destination/hotelcortez.png",
-},
-{
-    name: "Le Tartare",
-    description: "Un incroyable supplice!",
-    img: "../assets/Destination/tartare.png",
-},
-{
-    name: "Hôpital psychitrique Ashecliffe",
-    description: "Tellement intense qu'on en perd la boule!",
-    img: "../assets/Destination/shutterisland.png",
-},
-{
-    name: "Croisière sur le Titanic",
-    description: "Profitez de leur animation, les pieds dans l'eau!",
-    img: "../assets/Destination/titanic2.jpg",
-}]
-
-
-
-/**
- * CHANGER LES PAGES 
- *  */
-const destination = document.querySelector(".destination");
-const buttonContainer = document.querySelector(".button-container");
-const buttonResult = document.querySelector(".button-result");
-const titre = document.querySelector(".titreDestination");
-const destinationImage = document.querySelector(".destinationImage");
-const destinationDescription = document.querySelector(".destinationDescription");
-const buttonRestart = document.querySelector(".try-again")
-const accueil = document.querySelector(".accueil")
-buttonResult.style.display = "none";
-/**
- * accueil => quiz 
- *  */
-buttonStart.addEventListener("click", function () {
-    questions.style.display = "block";
-    buttonContainer.style.display = "flex";
-    destination.style.display = "none";
-    buttonStart.style.display = "none";
-    buttonResult.style.display = "flex";
-
+    if (i < questionsArray.length) {
+        displayQuestion(i);
+    } else {
+        // tu affiches la destination de rêve !
+    }
 })
 /**
- * quiz => result 
- *  */
-buttonResult.addEventListener("click", function () {
-    questions.style.display = "none";
-    buttonContainer.style.display = "none";
-    destination.style.display = "flex";
-    titre.textContent = `${destinationList[randomNumber].name}`;
-    destinationImage.src = `${destinationList[randomNumber].img}`;
-    destinationDescription.textContent = `${destinationList[randomNumber].description}`;
-
-})
-const submitButton = document.querySelector(".submitButton");
-
-submitButton.addEventListener("click", function () {
-    alert("Merci de votre intéret. Nos équipes reviendront vers vous au plus vite!")
-    event.preventDefault()
-});
-/**
- * result => accueil 
- *  */
-buttonRestart.addEventListener("click", function () {
-    questions.style.display = "none";
-    buttonContainer.style.display = "none";
-    destination.style.display = "none";
-    buttonRestart.style.display = "none";
-    accueil.style.display = "flex";
-    buttonStart.style.display = "flex";
-
-
-})
+ * Ce qui permet de ne pas afficher les cartes au chargement
+ */
+onload = (event) => { question.style.display="none", reponseA.style.display= "none", reponseB.style.display= "none"}
 
