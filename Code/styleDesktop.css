@@ -52,6 +52,38 @@ h2.slogan {
 
 /* BODY*/
 
+.buttonStart {
+    margin-top: 10rem;
+    padding: 27px 55px;
+    border-radius: 50px;
+    border: 0;
+    background-color: white;
+    box-shadow: rgb(0 0 0 / 5%) 0 0 8px;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    font-size: 21px;
+    transition: all .5s ease;
+}
+
+button:hover {
+    letter-spacing: 3px;
+    background-color: #02a295;
+    color: azure;
+    box-shadow: 10px 10px 30px rgb(8, 8, 8),
+        -10px -10px 30px rgb(60, 60, 60);
+}
+
+button:active {
+    letter-spacing: 3px;
+    background-color: #02a295;
+    color: azure;
+    box-shadow: 10px 10px 30px rgb(8, 8, 8),
+        -10px -10px 30px rgb(60, 60, 60);
+    transform: translateY(10px);
+    transition: 100ms;
+
+}
+
 body {
     display: flex;
     flex-direction: column;
@@ -69,23 +101,41 @@ body {
 
 }
 
+
+h4.question {
+    max-width: fit-content;
+    margin: 0 auto;
+    text-align: center;
+    font-size: 2.5rem;
+    margin-top: 10rem;
+    margin-bottom: 10rem;
+    box-shadow: 5px 5px 30px rgb(8, 8, 8),
+        -5px -5px 30px rgb(41, 41, 41);
+    border-radius: 7%;
+}
+
 .question {
     text-align: center;
     padding: 1rem;
-    color: azure font-size=larger;
+    color: white;
+    margin-top: 4rem;
+    margin-bottom: 4rem;
+    font-size: 2rem;
+    color: azure;
+    font-size: larger;
+
     font-size: 2rem;
     margin-top: 4rem;
     margin-bottom: 4rem;
+
 }
 
 h4.question {
     max-width: fit-content;
     margin: 0 auto;
-    /* Centrez horizontalement */
+
     text-align: center;
-    /* Centrez le texte */
     font-size: 2.5rem;
-    /* Réglez la taille de la police */
     margin-top: 10rem;
     margin-bottom: 10rem;
     box-shadow: 5px 5px 30px rgb(8, 8, 8),
@@ -132,7 +182,9 @@ h4.question {
 button:hover {
     letter-spacing: 3px;
     background-color: #02a295;
-    color: azure box-shadow=10px 10px 30px rgb(8, 8, 8),
+
+    color: azure;
+    box-shadow: 10px 10px 30px rgb(8, 8, 8),
         -10px -10px 30px rgb(60, 60, 60);
 }
 
@@ -150,6 +202,7 @@ button:active {
     display: none;
     flex-direction: column;
 }
+
 
 .button-result {
     display: none;
