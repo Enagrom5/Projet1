@@ -3,16 +3,15 @@
     padding: 0;
 }
 
+
+
 * {
     margin: 0;
-    font-family: "Inter", sans-serif;
+    font-family: Inter;
 }
 
 /*NAVBAR*/
-@font-face {
-    font-family: "Inter";
-    src: ../fonts/ ;
-}
+
 nav {
     display: flex;
     justify-content: space-between;
@@ -34,12 +33,46 @@ nav img {
     margin-left: 1rem;
 }
 
-h2.slogan{
+h2.slogan {
     margin-top: 2vh;
     color: #00ac9e;
 }
-
+ *{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+ }
 /* BODY*/
+
+.buttonStart {
+    margin-top: 10rem;
+    padding: 27px 55px;
+    border-radius: 50px;
+    border: 0;
+    background-color: white;
+    box-shadow: rgb(0 0 0 / 5%) 0 0 8px;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    font-size: 21px;
+    transition: all .5s ease;
+}
+
+button:hover {
+    letter-spacing: 3px;
+    background-color: #02a295;
+    color: azure; 
+    box-shadow: 10px 10px 30px rgb(8, 8, 8),
+        -10px -10px 30px rgb(60, 60, 60);
+}
+
+button:active {
+    letter-spacing: 3px;
+    background-color: #02a295;
+    color: azure; 
+    box-shadow: 10px 10px 30px rgb(8, 8, 8),
+        -10px -10px 30px rgb(60, 60, 60);
+    transform: translateY(10px);
+    transition: 100ms;
+
+}
 
 body {
     display: flex;
@@ -50,16 +83,29 @@ body {
     color: white;
 }
 
-.questions{
+.questions {
     display: flex;
     align-items: center;
 }
 
- .question{
+h4.question {
+    max-width: fit-content;
+    margin: 0 auto; 
+    text-align: center; 
+    font-size:2.5rem; 
+    margin-top: 10rem;
+    margin-bottom: 10rem;
+    box-shadow: 5px 5px 30px rgb(8, 8, 8),
+    -5px -5px 30px rgb(41, 41, 41);
+    border-radius: 7%;
+}
+.question {
     text-align: center;
     padding: 1rem;
     color: white;
-    font-size: larger;
+    margin-top: 4rem;
+    margin-bottom: 4rem;
+    font-size: 2rem;
 }
 
 .cardQuestion {
@@ -72,14 +118,15 @@ body {
     gap: 10rem;
     padding: 0rem 0rem;
 }
-.answers > button {
+
+.answers>button {
     background-color: #151515;
     height: 27rem;
     width: 35rem;
     background-size: cover;
     border-radius: 3%;
     box-shadow: 10px 10px 30px rgb(8, 8, 8),
-    -10px -10px 30px rgb(60, 60, 60);
+        -10px -10px 30px rgb(60, 60, 60);
     margin: Orem 5rem;
 
 }
