@@ -70,7 +70,7 @@ body {
  .question{
     text-align: center;
     padding: 1rem;
-    color: azure
+    color: azure;
     font-size: larger;
     font-size: 2rem;
     margin-top: 4rem;
@@ -79,9 +79,9 @@ body {
 
 h4.question {
     max-width: fit-content;
-    margin: 0 auto; /* Centrez horizontalement */
-    text-align: center; /* Centrez le texte */
-    font-size:2.5rem; /* Réglez la taille de la police */
+    margin: 0 auto; 
+    text-align: center; 
+    font-size:2.5rem; 
     margin-top: 10rem;
     margin-bottom: 10rem;
     box-shadow: 5px 5px 30px rgb(8, 8, 8),
@@ -127,7 +127,7 @@ h4.question {
        button:hover {
         letter-spacing: 3px;
         background-color: #02a295;
-        color: azure
+        color: azure;
         box-shadow: 10px 10px 30px rgb(8, 8, 8),
         -10px -10px 30px rgb(60, 60, 60);
        }
@@ -135,7 +135,7 @@ h4.question {
        button:active {
         letter-spacing: 3px;
         background-color: #02a295;
-        color: azure
+        color: azure;
         box-shadow: 10px 10px 30px rgb(8, 8, 8),
         -10px -10px 30px rgb(60, 60, 60);
         transform: translateY(10px);
