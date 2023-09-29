@@ -3,34 +3,24 @@
     padding: 0;
 }
 
-<<<<<<< HEAD
-
-
-* {
-    margin: 0;
-    font-family: Inter;
-}
-
-/*NAVBAR*/
-
-=======
 @font-face {
     font-family: "Inter";
     src:
-    local("Inter"),
-    url(./fonts/Inter-Black.woff2) format(woff2),
+        local("Inter"),
+        url(./fonts/Inter-Black.woff2) format(woff2),
 }
 
 * {
     margin: 0;
     font-family: "Inter";
 }
-body{
-   
+
+body {
+
     background-color: #151515;
 }
+
 /*NAVBAR*/
->>>>>>> b040548e6076bdc783e40855bec675f0c11b839a
 nav {
     display: flex;
     justify-content: space-between;
@@ -58,14 +48,8 @@ h2.slogan {
     margin-top: 2vh;
     color: #00ac9e;
 }
-<<<<<<< HEAD
- *{
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
- }
-=======
 
 
->>>>>>> b040548e6076bdc783e40855bec675f0c11b839a
 /* BODY*/
 
 .buttonStart {
@@ -84,7 +68,7 @@ h2.slogan {
 button:hover {
     letter-spacing: 3px;
     background-color: #02a295;
-    color: azure; 
+    color: azure;
     box-shadow: 10px 10px 30px rgb(8, 8, 8),
         -10px -10px 30px rgb(60, 60, 60);
 }
@@ -92,7 +76,7 @@ button:hover {
 button:active {
     letter-spacing: 3px;
     background-color: #02a295;
-    color: azure; 
+    color: azure;
     box-shadow: 10px 10px 30px rgb(8, 8, 8),
         -10px -10px 30px rgb(60, 60, 60);
     transform: translateY(10px);
@@ -119,41 +103,40 @@ body {
 
 h4.question {
     max-width: fit-content;
-    margin: 0 auto; 
-    text-align: center; 
-    font-size:2.5rem; 
+    margin: 0 auto;
+    text-align: center;
+    font-size: 2.5rem;
     margin-top: 10rem;
     margin-bottom: 10rem;
     box-shadow: 5px 5px 30px rgb(8, 8, 8),
-    -5px -5px 30px rgb(41, 41, 41);
+        -5px -5px 30px rgb(41, 41, 41);
     border-radius: 7%;
 }
+
 .question {
     text-align: center;
     padding: 1rem;
-<<<<<<< HEAD
     color: white;
     margin-top: 4rem;
     margin-bottom: 4rem;
     font-size: 2rem;
-=======
-    color: azure
+    color: azure;
     font-size: larger;
     font-size: 2rem;
     margin-top: 4rem;
     margin-bottom: 4rem;
->>>>>>> b040548e6076bdc783e40855bec675f0c11b839a
+
 }
 
 h4.question {
     max-width: fit-content;
-    margin: 0 auto; /* Centrez horizontalement */
-    text-align: center; /* Centrez le texte */
-    font-size:2.5rem; /* Réglez la taille de la police */
+    margin: 0 auto;
+    text-align: center;
+    font-size: 2.5rem;
     margin-top: 10rem;
     margin-bottom: 10rem;
     box-shadow: 5px 5px 30px rgb(8, 8, 8),
-    -5px -5px 30px rgb(41, 41, 41);
+        -5px -5px 30px rgb(41, 41, 41);
     border-radius: 7%;
 }
 
@@ -181,33 +164,33 @@ h4.question {
 }
 
 .buttonStart {
-        margin-top: 30rem ;
-        padding: 27px 55px;
-        border-radius: 50px;
-        border: 0;
-        background-color: white;
-        box-shadow: rgb(0 0 0 / 5%) 0 0 8px;
-        letter-spacing: 1.5px;
-        text-transform: uppercase;
-        font-size: 21px;
-        transition: all .5s ease;
-       }
-       
-       button:hover {
-        letter-spacing: 3px;
-        background-color: #02a295;
-        color: azure
-        box-shadow: 10px 10px 30px rgb(8, 8, 8),
+    margin-top: 30rem;
+    padding: 27px 55px;
+    border-radius: 50px;
+    border: 0;
+    background-color: white;
+    box-shadow: rgb(0 0 0 / 5%) 0 0 8px;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    font-size: 21px;
+    transition: all .5s ease;
+}
+
+button:hover {
+    letter-spacing: 3px;
+    background-color: #02a295;
+    color: azure;
+    box-shadow: 10px 10px 30px rgb(8, 8, 8),
         -10px -10px 30px rgb(60, 60, 60);
-       }
-       
-       button:active {
-        letter-spacing: 3px;
-        background-color: #02a295;
-        color: azure
-        box-shadow: 10px 10px 30px rgb(8, 8, 8),
+}
+
+button:active {
+    letter-spacing: 3px;
+    background-color: #02a295;
+    color: azure;
+    box-shadow: 10px 10px 30px rgb(8, 8, 8),
         -10px -10px 30px rgb(60, 60, 60);
-        transform: translateY(10px);
-        transition: 100ms;
+    transform: translateY(10px);
+    transition: 100ms;
 
 }
