@@ -39,12 +39,14 @@ li {
 
 nav img {
     margin-left: 1rem;
+
 }
 
 h2.slogan{
     margin-top: 2vh;
     color: #00ac9e;
 }
+
 
 /* BODY*/
 
@@ -54,12 +56,15 @@ body {
     align-items: center;
     justify-content: space-around;
     background-color: #151515;
+
     color: azure;
+
 }
 
 .questions{
     display: flex;
     align-items: center;
+
 }
 
  .question{
@@ -84,6 +89,7 @@ h4.question {
     border-radius: 7%;
 }
 
+
 .cardQuestion {
     align-items: center;
 }
@@ -103,7 +109,6 @@ h4.question {
     box-shadow: 10px 10px 30px rgb(8, 8, 8),
     -10px -10px 30px rgb(60, 60, 60);
     margin: Orem 5rem;
-
 }
 
 .buttonStart {
@@ -135,5 +140,5 @@ h4.question {
         -10px -10px 30px rgb(60, 60, 60);
         transform: translateY(10px);
         transition: 100ms;
-       
+
 }
