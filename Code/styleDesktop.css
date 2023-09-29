@@ -6,18 +6,20 @@
 @font-face {
     font-family: "Inter";
     src:
-    local("Inter"),
-    url(./fonts/Inter-Black.woff2) format(woff2),
+        local("Inter"),
+        url(./fonts/Inter-Black.woff2) format(woff2),
 }
 
 * {
     margin: 0;
     font-family: "Inter";
 }
-body{
-   
+
+body {
+
     background-color: #151515;
 }
+
 /*NAVBAR*/
 nav {
     display: flex;
@@ -42,7 +44,7 @@ nav img {
 
 }
 
-h2.slogan{
+h2.slogan {
     margin-top: 2vh;
     color: #00ac9e;
 }
@@ -61,17 +63,16 @@ body {
 
 }
 
-.questions{
+.questions {
     display: flex;
     align-items: center;
 
 }
 
- .question{
+.question {
     text-align: center;
     padding: 1rem;
-    color: azure
-    font-size: larger;
+    color: azure font-size=larger;
     font-size: 2rem;
     margin-top: 4rem;
     margin-bottom: 4rem;
@@ -79,13 +80,16 @@ body {
 
 h4.question {
     max-width: fit-content;
-    margin: 0 auto; /* Centrez horizontalement */
-    text-align: center; /* Centrez le texte */
-    font-size:2.5rem; /* Réglez la taille de la police */
+    margin: 0 auto;
+    /* Centrez horizontalement */
+    text-align: center;
+    /* Centrez le texte */
+    font-size: 2.5rem;
+    /* Réglez la taille de la police */
     margin-top: 10rem;
     margin-bottom: 10rem;
     box-shadow: 5px 5px 30px rgb(8, 8, 8),
-    -5px -5px 30px rgb(41, 41, 41);
+        -5px -5px 30px rgb(41, 41, 41);
     border-radius: 7%;
 }
 
@@ -100,45 +104,53 @@ h4.question {
     gap: 10rem;
     padding: 0rem 0rem;
 }
-.answers > button {
+
+.answers>button {
     background-color: #151515;
     height: 27rem;
     width: 35rem;
     background-size: cover;
     border-radius: 3%;
     box-shadow: 10px 10px 30px rgb(8, 8, 8),
-    -10px -10px 30px rgb(60, 60, 60);
+        -10px -10px 30px rgb(60, 60, 60);
     margin: Orem 5rem;
 }
 
 .buttonStart {
-        margin-top: 30rem ;
-        padding: 27px 55px;
-        border-radius: 50px;
-        border: 0;
-        background-color: white;
-        box-shadow: rgb(0 0 0 / 5%) 0 0 8px;
-        letter-spacing: 1.5px;
-        text-transform: uppercase;
-        font-size: 21px;
-        transition: all .5s ease;
-       }
-       
-       button:hover {
-        letter-spacing: 3px;
-        background-color: #02a295;
-        color: azure
-        box-shadow: 10px 10px 30px rgb(8, 8, 8),
-        -10px -10px 30px rgb(60, 60, 60);
-       }
-       
-       button:active {
-        letter-spacing: 3px;
-        background-color: #02a295;
-        color: azure
-        box-shadow: 10px 10px 30px rgb(8, 8, 8),
-        -10px -10px 30px rgb(60, 60, 60);
-        transform: translateY(10px);
-        transition: 100ms;
+    margin-top: 30rem;
+    padding: 27px 55px;
+    border-radius: 50px;
+    border: 0;
+    background-color: white;
+    box-shadow: rgb(0 0 0 / 5%) 0 0 8px;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    font-size: 21px;
+    transition: all .5s ease;
+}
 
+button:hover {
+    letter-spacing: 3px;
+    background-color: #02a295;
+    color: azure box-shadow=10px 10px 30px rgb(8, 8, 8),
+        -10px -10px 30px rgb(60, 60, 60);
+}
+
+button:active {
+    letter-spacing: 3px;
+    background-color: #02a295;
+    color: azure box-shadow=10px 10px 30px rgb(8, 8, 8),
+        -10px -10px 30px rgb(60, 60, 60);
+    transform: translateY(10px);
+    transition: 100ms;
+
+}
+
+.destination {
+    display: none;
+    flex-direction: column;
+}
+
+.button-result {
+    display: none;
 }
