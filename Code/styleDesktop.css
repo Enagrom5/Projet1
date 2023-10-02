@@ -1,54 +1,87 @@
-:root {
-    margin: 0;
-    padding: 0;
-}
-
 @font-face {
     font-family: "Inter";
     src:
-    local("Inter"),
-    url(./fonts/Inter-Black.woff2) format(woff2),
+        local("Inter"),
+        url(./fonts/Inter-Black.woff2) format(woff2),
 }
 
 * {
     margin: 0;
-    font-family: "Inter";
+    padding: 0;
+    text-decoration: none;
+    list-style: none;
 }
-body{
-   
-    background-color: #151515;
-}
+
 /*NAVBAR*/
-nav {
-    display: flex;
-    justify-content: space-between;
+.navbar {
     background-color: #282727;
     color: azure;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: 100%;
-    height: 6rem;
+    max-height: 17vh
 }
 
-nav ul,
-li {
-    list-style: none;
+.navlink ul {
     display: flex;
     align-items: center;
-    flex-direction: row;
-    padding-right: 2rem;
+    cursor: pointer;
 }
 
-nav img {
-    margin-left: 1rem;
+.navlink ul li {
+    margin: 0 30 0 0;
+    padding: 3rem;
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+li:hover {
+    background-color: #02a295;
+    transition: 1s;
+    padding: 1rem;
+    border-radius: 50%;
 
 }
 
-h2.slogan{
-    margin-top: 2vh;
-    color: #00ac9e;
+.companyLogo {
+    height: 20vh;   
 }
-
-
+ 
 /* BODY*/
+
+.buttonStart {
+    margin-top: 10rem;
+    padding: 27px 55px;
+    border-radius: 50px;
+    border: 0;
+    background-color: white;
+    box-shadow: rgb(0 0 0 / 5%) 0 0 8px;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    font-size: 21px;
+    transition: all .5s ease;
+    cursor: pointer;
+}
+
+button:hover {
+    letter-spacing: 3px;
+    background-color: #02a295;
+    color: azure;
+    box-shadow: 10px 10px 30px rgb(8, 8, 8),
+        -10px -10px 30px rgb(60, 60, 60);
+}
+
+button:active {
+    letter-spacing: 3px;
+    background-color: #02a295;
+    color: azure;
+    box-shadow: 10px 10px 30px rgb(8, 8, 8),
+        -10px -10px 30px rgb(60, 60, 60);
+    transform: translateY(10px);
+    transition: 100ms;
+
+}
 
 body {
     display: flex;
@@ -61,31 +94,51 @@ body {
 
 }
 
-.questions{
+.questions {
     display: flex;
     align-items: center;
 
 }
 
- .question{
+
+h4.question {
+    max-width: fit-content;
+    margin: 0 auto;
+    text-align: center;
+    font-size: 2.5rem;
+    margin-top: 10rem;
+    margin-bottom: 10rem;
+    box-shadow: 5px 5px 30px rgb(8, 8, 8),
+        -5px -5px 30px rgb(41, 41, 41);
+    border-radius: 7%;
+}
+
+.question {
     text-align: center;
     padding: 1rem;
-    color: azure
+    color: white;
+    margin-top: 4rem;
+    margin-bottom: 4rem;
+    font-size: 2rem;
+    color: azure;
     font-size: larger;
+
     font-size: 2rem;
     margin-top: 4rem;
     margin-bottom: 4rem;
+
 }
 
 h4.question {
     max-width: fit-content;
-    margin: 0 auto; /* Centrez horizontalement */
-    text-align: center; /* Centrez le texte */
-    font-size:2.5rem; /* Réglez la taille de la police */
+    margin: 0 auto;
+
+    text-align: center;
+    font-size: 2.5rem;
     margin-top: 10rem;
     margin-bottom: 10rem;
     box-shadow: 5px 5px 30px rgb(8, 8, 8),
-    -5px -5px 30px rgb(41, 41, 41);
+        -5px -5px 30px rgb(41, 41, 41);
     border-radius: 7%;
 }
 
@@ -100,45 +153,56 @@ h4.question {
     gap: 10rem;
     padding: 0rem 0rem;
 }
-.answers > button {
+
+.answers>button {
     background-color: #151515;
     height: 27rem;
     width: 35rem;
     background-size: cover;
     border-radius: 3%;
     box-shadow: 10px 10px 30px rgb(8, 8, 8),
-    -10px -10px 30px rgb(60, 60, 60);
+        -10px -10px 30px rgb(60, 60, 60);
     margin: Orem 5rem;
 }
 
 .buttonStart {
-        margin-top: 30rem ;
-        padding: 27px 55px;
-        border-radius: 50px;
-        border: 0;
-        background-color: white;
-        box-shadow: rgb(0 0 0 / 5%) 0 0 8px;
-        letter-spacing: 1.5px;
-        text-transform: uppercase;
-        font-size: 21px;
-        transition: all .5s ease;
-       }
-       
-       button:hover {
-        letter-spacing: 3px;
-        background-color: #02a295;
-        color: azure
-        box-shadow: 10px 10px 30px rgb(8, 8, 8),
-        -10px -10px 30px rgb(60, 60, 60);
-       }
-       
-       button:active {
-        letter-spacing: 3px;
-        background-color: #02a295;
-        color: azure
-        box-shadow: 10px 10px 30px rgb(8, 8, 8),
-        -10px -10px 30px rgb(60, 60, 60);
-        transform: translateY(10px);
-        transition: 100ms;
+    margin-top: 30rem;
+    padding: 27px 55px;
+    border-radius: 50px;
+    border: 0;
+    background-color: white;
+    box-shadow: rgb(0 0 0 / 5%) 0 0 8px;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    font-size: 21px;
+    transition: all .5s ease;
+}
 
+button:hover {
+    letter-spacing: 3px;
+    background-color: #02a295;
+
+    color: azure;
+    box-shadow: 10px 10px 30px rgb(8, 8, 8),
+        -10px -10px 30px rgb(60, 60, 60);
+}
+
+button:active {
+    letter-spacing: 3px;
+    background-color: #02a295;
+    color: azure box-shadow=10px 10px 30px rgb(8, 8, 8),
+        -10px -10px 30px rgb(60, 60, 60);
+    transform: translateY(10px);
+    transition: 100ms;
+
+}
+
+.destination {
+    display: none;
+    flex-direction: column;
+}
+
+
+.button-result {
+    display: none;
 }
