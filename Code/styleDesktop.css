@@ -1,8 +1,3 @@
-:root {
-    margin: 0;
-    padding: 0;
-}
-
 @font-face {
     font-family: "Inter";
     src:
@@ -13,44 +8,46 @@
 * {
     margin: 0;
     padding: 0;
-   
-}
-
-body {
-
-    background-color: #151515;
+    text-decoration: none;
+    list-style: none;
 }
 
 /*NAVBAR*/
-header,nav {
-    display: flex;
-    justify-content: space-between;
+.navbar {
     background-color: #282727;
     color: azure;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: 100%;
-    height: 6rem;
+    max-height: 17vh
 }
 
-nav ul,
-li {
-    list-style: none;
+.navlink ul {
     display: flex;
     align-items: center;
-    flex-direction: row;
-    padding-right: 2rem;
+    cursor: pointer;
 }
 
-nav img {
-    margin-left: 1rem;
+.navlink ul li {
+    margin: 0 30 0 0;
+    padding: 3rem;
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+li:hover {
+    background-color: #02a295;
+    transition: 1s;
+    padding: 1rem;
+    border-radius: 50%;
 
 }
 
-h2.slogan {
-    margin-top: 2vh;
-    color: #00ac9e;
+.companyLogo {
+    height: 20vh;   
 }
-
-
+ 
 /* BODY*/
 
 main{
@@ -67,8 +64,7 @@ main{
     text-transform: uppercase;
     font-size: 21px;
     transition: all .5s ease;
-    display: flex;
-    justify-content: flex-start;
+    cursor: pointer;
 }
 
 button:hover {
