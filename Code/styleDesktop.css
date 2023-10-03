@@ -24,7 +24,9 @@
   width: 100%;
   max-height: 17vh;
 }
-
+.navlink {
+  display: flex;
+}
 .navlink ul {
   display: flex;
   align-items: center;

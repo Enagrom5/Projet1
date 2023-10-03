@@ -88,8 +88,6 @@ function removeButton() {
  */
 function displayQuestion(idQuestion) {
   question.innerHTML = questionsArray[idQuestion]; // Affiche la question dans le tableau questionsArray
-  //reponseA.innerHTML = reponseAArray[idQuestion]; - Affiche le texte de la réponse A via le tableau des txt réponses A
-  //reponseB.innerHTML = reponseBArray[idQuestion]; - Affiche le texte de la réponse B via le tableau des txt réponses B
   reponseA.style.backgroundImage = imagesA[idQuestion]; // Affiche l'image A dans le cadre A via le tableau des images A
   reponseB.style.backgroundImage = imagesB[idQuestion]; // Affiche l'image B dans le cadre B via le tableau des images B
 }

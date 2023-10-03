@@ -1,85 +1,88 @@
 <!DOCTYPE html>
 <html lang="fr">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>BadTripAdvisor</title>
-    <link rel="stylesheet" href="styleDesktop.css">
-</head>
+    <link rel="stylesheet" href="styleDesktop.css" />
+  </head>
 
-<body>
-
+  <body>
     <nav class="navbar">
-        
-        <div class="navlink">
-            <ul>
-                <div> 
-                    <img class="companyLogo" src ="Ressources/logo badtrip retouch.png" alt="logo" name="logo"/>
-                </div>
-                <li>Accueil</li>
-                <li>Notre compagnie</li>
-                <li>Nos voyages</li>
-                <li>Générateur de destination</li> 
-                <li>Nous contacter</li> 
-            </ul>
-        </div>
-    </nav>
-    
-<main>
-    
-    <section class="startQuiz">
-        <button class="buttonStart"> Démarrez le quiz!</button>
-    </section>
-
-    <section class="Questions"> <!-- Bloc incorporant la question et les réponses -->
-        <div class="Question"> <!-- bloc question -->
-            <h4 class="question"></h4>
-        </div>
-
-        <div class="answers"> <!-- bloc réponse A -->
-            <button class="cardAnswerA">
-                <h4 class="answerA"><b></b></h4>
-            </button>
-
-
-            <button class="cardAnswerB"> <!-- bloc réponse B -->
-                <h4 class="answerB"><b></b></h4>
-            </button>
-        </div>
-        </div>
-        <span class="button-container">
-            <button class="button-result" type="button">Découvrir votre
-            destination!</button>
+      <div class="navlink">
+        <span>
+          <img
+            class="companyLogo"
+            src="Ressources/logo-badtrip-retouch.png"
+            alt="logo"
+            id="logo"
+          />
         </span>
-    </section>
-    
-    <section class="destination">
+        <ul>
+          <li>Accueil</li>
+          <li>Notre compagnie</li>
+          <li>Nos voyages</li>
+          <li>Générateur de destination</li>
+          <li>Nous contacter</li>
+        </ul>
+      </div>
+    </nav>
+
+    <main>
+      <section class="startQuiz">
+        <button class="buttonStart">Démarrez le quiz!</button>
+      </section>
+
+      <section class="Questions">
+        <!-- Bloc incorporant la question et les réponses -->
+        <div class="Question">
+          <!-- bloc question -->
+          <h4 class="question"></h4>
+        </div>
+
+        <div class="answers">
+          <!-- bloc réponse A -->
+          <button class="cardAnswerA"></button>
+
+          <button class="cardAnswerB"><!-- bloc réponse B --></button>
+        </div>
+
+        <span class="button-container">
+          <button class="button-result" type="button">
+            Découvrir votre destination!
+          </button>
+        </span>
+      </section>
+
+      <section class="destination">
         <h2>Félicitation! Voici la destination de tes rêves:</h2>
         <h3 class="titreDestination"></h3>
-        <img class="destinationImage">
+        <img
+          class="destinationImage"
+          src="destinationImage.src"
+          alt="destinationImage"
+        />
         <p class="destinationDescription"></p>
-        <h4>Si cette destination vous convient. Merci de remplir ce formulaire. Notre équipe de choc vous recontactera
-            pour planifier un voyage inoubliable!</h4>
+        <h4>
+          Si cette destination vous convient. Merci de remplir ce formulaire.
+          Notre équipe de choc vous recontactera pour planifier un voyage
+          inoubliable!
+        </h4>
         <form>
-            <label for="name">Nom&nbsp;:</label>
-            <input type="text" id="name" name="user_name" />
-            <label for="mail">E-mail&nbsp;:</label>
-            <input type="email" id="mail" name="user_mail" />
-            <label for="msg">Message&nbsp;:</label>
-            <textarea id="msg" name="user_message"></textarea>
-            <button type="submit" class="submitButton">Envoyer </button>
-
-
+          <label for="name">Nom&nbsp;:</label>
+          <input type="text" id="name" name="user_name" />
+          <label for="mail">E-mail&nbsp;:</label>
+          <input type="email" id="mail" name="user_mail" />
+          <label for="msg">Message&nbsp;:</label>
+          <textarea id="msg" name="user_message"></textarea>
+          <button type="submit" class="submitButton">Envoyer</button>
         </form>
-        <button class="try-again" name="try again">Générer une nouvelle destination</button>
-    </section>
+        <button class="try-again" name="try again">
+          Générer une nouvelle destination
+        </button>
+      </section>
+    </main>
 
-</main>
-    
-    
     <script src="script.js"></script>
-
-</body>
-
+  </body>
 </html>
