@@ -1,3 +1,8 @@
+:root{
+    margin:0px;
+    height: 100vh;
+   
+}
 @font-face {
     font-family: "Inter";
     src:
@@ -93,11 +98,9 @@ body {
     justify-content: space-around;
     background-color: #151515;
     background-image: 
-     url("Ressources/newfond.png");
+     url("Ressources/third.png");
     background-size: cover;
     background-repeat: no-repeat;
-height: 100vh;
-width: 100vw;
     color: azure;
 
 }
