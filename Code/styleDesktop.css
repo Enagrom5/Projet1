@@ -55,10 +55,7 @@ li:hover {
  
 /* BODY*/
 
-main{
-    
-   
-}
+
 
 .buttonStart {
     border-radius: 50px;
@@ -97,12 +94,11 @@ body {
     align-items: center;
     justify-content: space-around;
     background-color: #151515;
-    background-image: 
-     url("Ressources/third.png");
+    background-image: url("Ressources/third.png");
     background-size: cover;
     background-repeat: no-repeat;
     color: azure;
-
+   
 }
 
 .questions {
@@ -117,8 +113,8 @@ h4.question {
     margin: 0 auto;
     text-align: center;
     font-size: 2.5rem;
-    margin-top: 10rem;
-    margin-bottom: 10rem;
+    margin-top: 2rem;
+    margin-bottom: 4rem;
     box-shadow: 5px 5px 30px rgb(8, 8, 8),
         -5px -5px 30px rgb(41, 41, 41);
     border-radius: 7%;
@@ -128,30 +124,12 @@ h4.question {
     text-align: center;
     padding: 1rem;
     color: white;
-    margin-top: 4rem;
-    margin-bottom: 4rem;
     font-size: 2rem;
     color: azure;
     font-size: larger;
 
-    font-size: 2rem;
-    margin-top: 4rem;
-    margin-bottom: 4rem;
-
 }
 
-h4.question {
-    max-width: fit-content;
-    margin: 0 auto;
-
-    text-align: center;
-    font-size: 2.5rem;
-    margin-top: 10rem;
-    margin-bottom: 10rem;
-    box-shadow: 5px 5px 30px rgb(8, 8, 8),
-        -5px -5px 30px rgb(41, 41, 41);
-    border-radius: 7%;
-}
 
 
 .cardQuestion {
@@ -216,4 +194,9 @@ button:active {
 
 .button-result {
     display: none;
+}
+
+.try-again{
+    
+    width: 50%;
 }
