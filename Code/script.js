@@ -66,7 +66,7 @@ const imagesB = [
 const question = document.querySelector(".question"); // Sélectionne en JS la balise question
 const reponseA = document.querySelector(".cardAnswerA"); // Sélectionne en JS la balise réponse A
 const reponseB = document.querySelector(".cardAnswerB"); // Sélectionne JS la balise réponse B
-const buttonStart = document.querySelector(".buttonStart");
+const buttonStart = document.querySelector(".startQuiz");
 
 let i = 0;
 
@@ -178,7 +178,7 @@ const destinationList = [
   {
     name: "Centre de désintoxication",
     description:
-      "LE dernier lieu à la mode pour partir en vacances. Méfiance tout de même : n'acceptez aucune pilule qui vous serez proposé !",
+      "LE dernier lieu à la mode pour partir en vacances. Méfiance tout de même : n'acceptez aucune pilule qui vous serait proposée !",
     img: "../assets/Destination/centredesintox.jpg",
   },
   {
