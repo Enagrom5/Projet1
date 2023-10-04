@@ -29,7 +29,7 @@
 span {
   display: flex;
   align-items: center;
-  gap: 2vw;
+  gap: 1vw;
   margin-left: 1vw;
 }
 
@@ -71,6 +71,10 @@ li {
   }
 }
 
+.search{
+  display: flex;
+}
+
 /* BODY*/
 .startQuiz {
   display: flex;
@@ -95,9 +99,8 @@ button:active {
 }
 
 body {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
   width: 100vw;
   height: 100vh;
   background-color: #151515;
@@ -249,6 +252,14 @@ textarea,
   height: 60%;
   width: 60%;
 }
+.media{
+display: flex;
+gap: 4rem;
+}
+.media>button{
+  width:5%;
+  
+}
 
 /* MEDIA QUERIES */
 @media screen and (max-width: 992px) {
@@ -267,15 +278,70 @@ textarea,
   body {
     background-image: url("Ressources/third-tablette.png");
   }
+  /* MENU BURGER*/
+
+  #openBtn {
+    display: flex;
+    align-items: center;
+    padding: 0rem 10rem 0rem 0rem;
+  }
+  .sidenav {
+    height: 7rem;
+    width: 100%;
+    position: fixed;
+    z-index: 1;
+    top: -250px;
+    background-color: #151515;
+    padding-top: 0;
+    transition: top 0.5s ease;
+    display: none;
+    justify-content: center;
+    
+  }
+  .sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+  }
+  .sidenav.active {
+    top: 7rem;
+    display: flex;
+    
+  }
+  .sidenav .close {
+    position: absolute;
+    top: 0;
+    right: 10px;
+    font-size: 36px;
+  }
+  .burger-icon span {
+    
+    width: 35px;
+    height: 5px;
+    background-color: azure;
+   
+  }
+  .burger-icon{
+    flex-direction: column;
+
+  }
+  #closeBtn{
+    display:none;
+    color: azure;
+}
 }
 
 @media screen and (max-width: 768px) {
-  .navbar ul {
-    display: none;
-  }
-  #openBtn {
-    display: flex;
-  }
+.navbar ul li {
+  font-size: 1rem;
+  align-items: center;
+} 
+.startQuiz {
+  padding-top: 20rem;
+}
   .answers {
     flex-wrap: wrap;
     justify-content: center;
@@ -289,6 +355,61 @@ textarea,
   body {
     background-image: url("Ressources/third-mobile.png");
   }
+  /* MENU BURGER*/
+
+  #openBtn {
+    display: flex;
+    align-items: center;
+    padding: 0rem 10rem 0rem 0rem;
+  }
+  .sidenav {
+    height: 7rem;
+    width: 100%;
+    position: fixed;
+    z-index: 1;
+    top: -250px;
+    background-color: #151515;
+    padding-top: 0;
+    transition: top 0.5s ease;
+    display: none;
+    justify-content: center;
+    
+  }
+  .sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+  }
+  .sidenav.active {
+    top: 7rem;
+    display: flex;
+    
+  }
+  .sidenav .close {
+    position: absolute;
+    top: 0;
+    right: 10px;
+    font-size: 36px;
+  }
+  .burger-icon span {
+    
+    width: 35px;
+    height: 5px;
+    background-color: azure;
+   
+  }
+  .burger-icon{
+    flex-direction: column;
+
+  }
+  #closeBtn{
+    display:none;
+    color: azure;
+  }
+   /* MENU BURGER*/
 }
 @media screen and (max-width: 400px) {
   .navbar ul {
@@ -313,6 +434,60 @@ textarea,
   .Questions {
     padding-top: 2rem;
   }
+  /* MENU BURGER*/
+
+  #openBtn {
+    display: flex;
+    align-items: center;
+    padding: 0rem 10rem 0rem 0rem;
+  }
+  .sidenav {
+    height: 7rem;
+    width: 100%;
+    position: fixed;
+    z-index: 1;
+    top: -250px;
+    background-color: #151515;
+    padding-top: 0;
+    transition: top 0.5s ease;
+    display: none;
+    justify-content: center;
+    
+  }
+  .sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+  }
+  .sidenav.active {
+    top: 7rem;
+    display: flex;
+    
+  }
+  .sidenav .close {
+    position: absolute;
+    top: 0;
+    right: 10px;
+    font-size: 36px;
+  }
+  .burger-icon span {
+    
+    width: 35px;
+    height: 5px;
+    background-color: azure;
+   
+  }
+  .burger-icon{
+    flex-direction: column;
+
+  }
+  #closeBtn{
+    display:none;
+    color: azure;
+}
 }
 @media screen and (min-width: 992px) {
   li {

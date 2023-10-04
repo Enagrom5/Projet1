@@ -261,3 +261,27 @@ buttonRestart.addEventListener("click", function () {
   buttonStart.style.display= "flex";
   
 });
+
+
+/**
+ * MENU BURGER
+ */
+const sidenav = document.querySelector(".sidenav");
+const openBtn = document.getElementById("openBtn");
+const closeBtn = document.getElementById("closeBtn");
+
+
+openBtn.onclick = openNav;
+closeBtn.onclick = closeNav;
+
+
+function openNav() {
+  sidenav.classList.add("active");
+  closeBtn.style.display="flex";
+
+}
+
+
+function closeNav() {
+  sidenav.classList.remove("active");
+}
