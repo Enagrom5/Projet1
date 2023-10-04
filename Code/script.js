@@ -2,9 +2,7 @@ const destination = document.querySelector(".destination");
 const buttonResult = document.querySelector(".button-container");
 const titre = document.querySelector(".titreDestination");
 const destinationImage = document.querySelector(".destinationImage");
-const destinationDescription = document.querySelector(
-  ".destinationDescription"
-);
+const destinationDescription = document.querySelector(".destinationDescription");
 const buttonRestart = document.querySelector(".try-again");
 const accueil = document.querySelector(".startQuiz");
 
@@ -77,9 +75,9 @@ let i = 0;
  */
 function removeButton() {
   buttonStart.remove();
-  reponseA.style.display = "block";
-  reponseB.style.display = "block";
-  question.style.display = "block";
+  reponseA.style.display = "flex";
+  reponseB.style.display = "flex";
+  question.style.display = "flex";
   displayQuestion(i);
 }
 
@@ -104,10 +102,11 @@ let calculNumber = 0;
 reponseA.addEventListener("click", function () {
   // permet de passer à la question suivante
   i++;
-  calculNumber += 5;
+  
   console.log(calculNumber);
   if (i < questionsArray.length) {
     displayQuestion(i);
+    calculNumber += 0;
   } else {
     buttonResult.style.display = "flex";
   }
@@ -119,10 +118,11 @@ reponseA.addEventListener("click", function () {
 reponseB.addEventListener("click", function () {
   // permet de passer à la question suivante
   i++;
-  calculNumber += 2;
+  
   console.log(calculNumber);
   if (i < questionsArray.length) {
     displayQuestion(i);
+    calculNumber += 1;
   } else {
     buttonResult.style.display = "flex";
   }
@@ -138,8 +138,7 @@ onload = (event) => {
 };
 
 /* Tableau pour les destinations*/
-let randomNumber = Math.floor(Math.random() * 14);
-console.log(randomNumber);
+
 
 const destinationList = [
   {
@@ -220,6 +219,11 @@ const destinationList = [
     description: "Profitez de leur animation, les pieds dans l'eau!",
     img: "../assets/Destination/titanic2.jpg",
   },
+  {
+    name: "Croisière sur le Titanic",
+    description: "Profitez de leur animation, les pieds dans l'eau!",
+    img: "../assets/Destination/titanic2.jpg",
+  },
 ];
 
 /**
@@ -233,9 +237,9 @@ const questions = document.querySelector(".Questions");
 buttonResult.addEventListener("click", function () {
   questions.style.display = "none";
   destination.style.display = "flex";
-  titre.textContent = `${destinationList[randomNumber].name}`;
-  destinationImage.src = `${destinationList[randomNumber].img}`;
-  destinationDescription.textContent = `${destinationList[randomNumber].description}`;
+  titre.textContent = `${destinationList[calculNumber].name}`;
+  destinationImage.src = `${destinationList[calculNumber].img}`;
+  destinationDescription.textContent = `${destinationList[calculNumber].description}`;
 });
 const submitButton = document.querySelector(".submitButton");
 
@@ -250,10 +254,10 @@ submitButton.addEventListener("click", function () {
  *  */
 buttonRestart.addEventListener("click", function () {
   questions.style.display = "none";
-  buttonContainer.style.display = "none";
+  buttonResult.style.display = "none";
   destination.style.display = "none";
   buttonRestart.style.display = "none";
   accueil.style.display = "flex";
-  buttonStart.style.display = "flex";
+  buttonStart.style.display= "flex";
   
 });
