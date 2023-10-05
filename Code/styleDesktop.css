@@ -19,6 +19,7 @@
 #openBtn{
   display: none;
 }
+
 .navbar {
 width: 100vw;
 display: flex;
@@ -80,15 +81,14 @@ button:active {
   transform: translateY(10px);
   transition: 100ms;
 }
-
+ 
 body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: space-around;
   background-color: #151515;
-  background-image: url("Ressources/third.png");
-  background-size: cover;
+  background-image: url("Ressources/third.png ");
+  background-size: cover;  
   background-repeat: no-repeat;
   color: azure;
 }
