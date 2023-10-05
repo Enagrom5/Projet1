@@ -203,8 +203,8 @@ button:hover {
 button:active {
   letter-spacing: 3px;
   background-color: #02a295;
-  color: azure box-shadow=10px 10px 30px rgb(8, 8, 8),
-    -10px -10px 30px rgb(60, 60, 60);
+  color: azure;
+  box-shadow: 10px 10px 30px rgb(8, 8, 8), -10px -10px 30px rgb(60, 60, 60);
   transform: translateY(10px);
   transition: 100ms;
 }
@@ -436,7 +436,6 @@ label {
   }
   #search {
     display: none;
-   
   }
   .startQuiz {
     padding-top: 10rem;
@@ -488,7 +487,7 @@ label {
     top: -250px;
     background-color: #151515;
     padding-top: 0;
-    transition: top 0.5s ee;
+    transition: top 0.5s;
     display: none;
     justify-content: center;
   }
