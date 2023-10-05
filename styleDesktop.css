@@ -488,7 +488,7 @@ label {
     top: -250px;
     background-color: #151515;
     padding-top: 0;
-    transition: top 0.5s ease;
+    transition: top 0.5s ee;
     display: none;
     justify-content: center;
   }
