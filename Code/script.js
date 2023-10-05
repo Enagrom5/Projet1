@@ -268,20 +268,17 @@ buttonRestart.addEventListener("click", function () {
  */
 const sidenav = document.querySelector(".sidenav");
 const openBtn = document.getElementById("openBtn");
-const closeBtn = document.getElementById("closeBtn");
+
 
 
 openBtn.onclick = openNav;
-closeBtn.onclick = closeNav;
+
 
 
 function openNav() {
-  sidenav.classList.add("active");
-  closeBtn.style.display="flex";
+  sidenav.classList.toggle("active");
+ 
 
 }
 
 
-function closeNav() {
-  sidenav.classList.remove("active");
-}
