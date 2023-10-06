@@ -16,9 +16,16 @@
 
 /*NAVBAR*/
 
+.companyLogo {
+  display: block;
+  width: 40%;
+  height: auto;
+} 
+
 #openBtn {
   display: none;
 }
+
 .navbar {
   width: 100vw;
   display: flex;
@@ -97,7 +104,7 @@ button:active {
   transform: translateY(10px);
   transition: 100ms;
 }
-
+ 
 body {
   display: grid;
   grid-template-rows: auto 1fr auto;
@@ -336,6 +343,15 @@ label {
   .burger-icon {
     flex-direction: column;
   }
+  #logo {
+    width: 15%;
+    height: auto;
+  }
+  #compagny{
+    width: 30%;
+    height: auto;
+  }
+
 }
 /*RESPONSIVE MOBILE*/
 
@@ -406,6 +422,7 @@ label {
 
   #compagny {
     width: 50%;
+    height: auto;
   }
   #logo {
     width: 30%;
@@ -557,6 +574,6 @@ label {
   }
   #logo {
     width: 25%;
-    height: 70%;
+    height: auto;
   }
 }
