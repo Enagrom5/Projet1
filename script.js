@@ -68,15 +68,16 @@ const imagesB = [
 const question = document.querySelector(".question"); // Sélectionne en JS la balise question
 const reponseA = document.querySelector(".cardAnswerA"); // Sélectionne en JS la balise réponse A
 const reponseB = document.querySelector(".cardAnswerB"); // Sélectionne JS la balise réponse B
-const buttonStart = document.querySelector(".startQuiz");
+const buttonStart = document.querySelector(".buttonStart");
+const startQuiz = document.querySelector(".startQuiz")
 
 let i = 0;
-
+const userName=prompt("Quel est votre nom?")
 /**
  * Fonction qui permet la suppression du bouton "démarrer le quiz"
  */
 function removeButton() {
-  buttonStart.remove();
+  buttonStart.style.display="none";
   reponseA.style.display = "flex";
   reponseB.style.display = "flex";
   question.style.display = "flex";
@@ -250,20 +251,21 @@ const submitButton = document.querySelector(".submitButton");
 
 submitButton.addEventListener("click", function () {
   alert(
-    "Merci de votre intéret. Nos équipes reviendront vers vous au plus vite!"
+    `${userName}, merci de votre intéret. Nos équipes reviendront vers vous au plus vite!`
   );
-  event.preventDefault();
+  event.preventDefault()
 });
 /**
  * result => accueil
  *  */
+const newStart = document.querySelector("#startQuiz")
 buttonRestart.addEventListener("click", function () {
-  questions.style.display = "none";
-  buttonResult.style.display = "none";
   destination.style.display = "none";
   buttonRestart.style.display = "none";
   accueil.style.display = "flex";
-  buttonStart.style.display = "flex";
+  buttonStart.style.display="flex";
+
+  
 });
 
 /**
