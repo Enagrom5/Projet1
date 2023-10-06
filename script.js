@@ -255,18 +255,7 @@ submitButton.addEventListener("click", function () {
   );
   event.preventDefault()
 });
-/**
- * result => accueil
- *  */
-const newStart = document.querySelector("#startQuiz")
-buttonRestart.addEventListener("click", function () {
-  destination.style.display = "none";
-  buttonRestart.style.display = "none";
-  accueil.style.display = "flex";
-  buttonStart.style.display="flex";
 
-  
-});
 
 /**
  * MENU BURGER
