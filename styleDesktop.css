@@ -79,6 +79,7 @@ li {
 .startQuiz {
   display: flex;
   justify-content: center;
+  align-items: center;
 }
 
 button:hover {
@@ -109,6 +110,9 @@ body {
   background-attachment: fixed;
   color: azure;
 }
+main{
+  justify-content: center;
+}
 h2 {
   font-size: 4rem;
 }
@@ -123,6 +127,7 @@ p {
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
   margin: 1rem;
 }
 
@@ -189,6 +194,7 @@ h4.question {
   font-size: 21px;
   transition: all 0.5s ease;
 }
+
 .try-again,
 .submitButton {
   margin-top: 4rem;
@@ -260,6 +266,12 @@ label {
 }
 .media > button {
   width: 5%;
+}
+#compagny {
+  width: 50%;
+}
+#logo {
+  width: 30%;
 }
 
 /* MEDIA QUERIES */
@@ -334,6 +346,9 @@ label {
   }
   .startQuiz {
     padding-top: 10rem;
+    display: flex;
+    justify-content: center;
+    
   }
   .answers {
     flex-wrap: wrap;
@@ -446,6 +461,8 @@ label {
   }
   .startQuiz {
     padding-top: 10rem;
+    display: flex;
+    justify-content: center;
   }
   .answers {
     flex-wrap: wrap;
@@ -478,6 +495,7 @@ label {
   .buttonStart {
     padding: 1rem;
     padding-top: 0.5rem;
+    justify-content: center;
   }
   /* MENU BURGER*/
 
@@ -527,13 +545,18 @@ label {
 }
 @media screen and (min-width: 992px) {
   li {
-    font-size: 2rem;
+    font-size: 1.5rem;
   }
 
-  .startQuiz {
-    padding-top: 20rem;
-  }
   body {
     gap: 10rem;
+  }
+  #compagny {
+    width: 50%;
+    height: 50%;
+  }
+  #logo {
+    width: 25%;
+    height: 60%;
   }
 }
