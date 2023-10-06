@@ -327,13 +327,13 @@ label {
 }
 /*RESPONSIVE MOBILE*/
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 769px) {
   .navbar ul li {
     font-size: 1rem;
     align-items: center;
   }
   .startQuiz {
-    padding-top: 20rem;
+    padding-top: 10rem;
   }
   .answers {
     flex-wrap: wrap;
@@ -374,7 +374,7 @@ label {
   #openBtn {
     display: flex;
     align-items: center;
-    padding: 0rem 10rem 0rem 0rem;
+    padding: 0rem 10rem 0rem 3rem;
   }
   .sidenav {
     height: 7rem;
@@ -387,6 +387,13 @@ label {
     transition: top 0.5s ease;
     display: none;
     justify-content: center;
+  }
+
+  #compagny {
+    width: 50%;
+  }
+  #logo {
+    width: 30%;
   }
   .sidenav a {
     padding: 8px 8px 8px 32px;
@@ -477,7 +484,7 @@ label {
   #openBtn {
     display: flex;
     align-items: center;
-    padding: 0rem 10rem 0rem 0rem;
+    padding: 0rem 5rem 0rem 2rem;
   }
   .sidenav {
     height: 7rem;
