@@ -1,7 +1,7 @@
 :root {
-  margin: 0px;
   height: 100vh;
 }
+
 @font-face {
   font-family: "Inter";
   src: local("Inter"), url(./fonts/Inter-Black.woff2) format(woff2);
@@ -16,55 +16,72 @@
 
 /*NAVBAR*/
 
-#openBtn{
+#openBtn {
   display: none;
 }
 
 .navbar {
-width: 100vw;
-display: flex;
-flex-direction: row;
-justify-content: space-between;
+  width: 100vw;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
 }
 
-span{
+span {
   display: flex;
   align-items: center;
-  gap: 2vw;  ;
+  gap: 1vw;
   margin-left: 1vw;
 }
 
-ul{
-  display: flex;
+ul {
+  display:flex;
   align-items: center;
   gap: 5vw;
   margin-right: 2vw;
-  padding: 1vw
-
+  padding: 1vw;
 }
 
 li {
+  display: inline-block;
   cursor: pointer;
   font-size: 1.5rem;
+  font-weight: bold;
 }
 
+.underline {
+  position: relative;
+}
+
+.underline::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 0;
+  height: 2px;
+  background-color: #02a295;
+  transition: width 0.6s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .underline:hover::before{
+    left: 0;
+    right: auto;
+    width: 100%;
+  }
+}
+
+.search{
+  display: flex;
+}
 
 /* BODY*/
-.startQuiz{
+.startQuiz {
   display: flex;
   justify-content: center;
 }
-.buttonStart {
-  border-radius: 50px;
-  border: 0;
-  background-color: white;
-  box-shadow: rgb(0 0 0 / 5%) 0 0 8px;
-  letter-spacing: 1.5px;
-  text-transform: uppercase;
-  font-size: 21px;
-  transition: all 0.5s ease;
-  cursor: pointer;
-}
+
 
 button:hover {
   letter-spacing: 3px;
@@ -83,16 +100,26 @@ button:active {
 }
  
 body {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  width: 100vw;
+  height: 100vh;
   background-color: #151515;
   background-image: url("Ressources/third.png ");
   background-size: cover;  
   background-repeat: no-repeat;
   color: azure;
 }
-
+h2 {
+  font-size: 4rem;
+}
+h3 {
+  font-size: 3rem;
+}
+h4,
+p {
+  font-size: 2rem;
+}
 .Questions {
   display: flex;
   flex-direction: column;
@@ -138,16 +165,19 @@ h4.question {
   box-shadow: 10px 10px 30px rgb(8, 8, 8), -10px -10px 30px rgb(60, 60, 60);
 }
 
-.cardAnswerA, .cardAnswerB{
+.cardAnswerA,
+.cardAnswerB {
   position: relative;
   padding-bottom: 26%;
   background-size: 100%;
-object-fit: cover;
-background-repeat: no-repeat;
-cursor: pointer;
+  object-fit: cover;
+  background-repeat: no-repeat;
+  cursor: pointer;
 }
 
-.buttonStart {
+.buttonStart,
+.button-result,
+.try-again,.submitButton {
   margin-top: 10rem;
   padding: 27px 55px;
   border-radius: 50px;
@@ -159,11 +189,12 @@ cursor: pointer;
   font-size: 21px;
   transition: all 0.5s ease;
 }
-
+.try-again,.submitButton{
+  margin-top: 4rem;
+}
 button:hover {
   letter-spacing: 3px;
   background-color: #02a295;
-
   color: azure;
   box-shadow: 10px 10px 30px rgb(8, 8, 8), -10px -10px 30px rgb(60, 60, 60);
 }
@@ -191,53 +222,283 @@ button:active {
   padding: 2rem;
   margin: 2rem;
 }
-.button-result,
-.try-again {
-  padding: 1rem;
-  border-radius: 50px;
-}
 
+
+.formulaire{
+  display: flex;
+  flex-direction: column;
+  padding-top: 6rem;
+  justify-content: center;
+  align-items: center;
+}
 form {
   display: flex;
   flex-direction: column;
-  width: 50%;
+  width: 80%;
   align-items: center;
+  padding: 2rem;
 }
 input,
 textarea,
-.submitButton {
+.submitButton,label {
   border-radius: 10px;
-  padding: 0.5rem;
+  padding: 1rem;
+  cursor: pointer;
+  width: 40%;
+}
+.submitButton{
+  width: 20%;
 }
 .destinationImage {
-  height: 50%;
-  width: 50%;
+  height: 60%;
+  width: 60%;
 }
-
+.media{
+display: flex;
+gap: 4rem;
+}
+.media>button{
+  width:5%;
+  
+}
 
 /* MEDIA QUERIES */
-@media screen and (max-width: 768px) {
-  .navbar ul {
-      display: none;
+@media screen and (max-width: 992px) {
+  .answers {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 7rem;
   }
-  #openBtn{
-    display: flex;
+  .Questions {
+    padding-top: 10rem;
   }
-  .answers{
-flex-wrap: wrap;
-justify-content: center;
-gap: 5rem;
+  .answers > button {
+    width: 350px;
+    height: 200px;
   }
+  body {
+    background-image: url("Ressources/third-tablette.png");
+  }
+  /* MENU BURGER*/
 
-.answers > button{
-  width: 350px;
-  height: 200px;
-}  
+  #openBtn {
+    display: flex;
+    align-items: center;
+    padding: 0rem 10rem 0rem 0rem;
+  }
+  .sidenav {
+    height: 7rem;
+    width: 100%;
+    position: fixed;
+    z-index: 1;
+    top: -250px;
+    background-color: #151515;
+    padding-top: 0;
+    transition: top 0.5s ease;
+    display: none;
+    justify-content: center;
+    
+  }
+  .sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+  }
+  .sidenav.active {
+    top: 7rem;
+    display: flex;
+    
+  }
+  .sidenav .close {
+    position: absolute;
+    top: 0;
+    right: 10px;
+    font-size: 36px;
+  }
+  .burger-icon span {
+    
+    width: 35px;
+    height: 5px;
+    background-color: azure;
+   
+  }
+  .burger-icon{
+    flex-direction: column;
+
+  }
+  #closeBtn{
+    display:none;
+    color: azure;
+}
 }
 
+@media screen and (max-width: 768px) {
+.navbar ul li {
+  font-size: 1rem;
+  align-items: center;
+} 
+.startQuiz {
+  padding-top: 20rem;
+}
+  .answers {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 5rem;
+  }
 
-@media screen and (max-width: 1280px){
-  li{
-    font-size: 1rem;
+  .answers > button {
+    width: 350px;
+    height: 200px;
+  }
+  body {
+    background-image: url("Ressources/third-mobile.png");
+  }
+  /* MENU BURGER*/
+
+  #openBtn {
+    display: flex;
+    align-items: center;
+    padding: 0rem 10rem 0rem 0rem;
+  }
+  .sidenav {
+    height: 7rem;
+    width: 100%;
+    position: fixed;
+    z-index: 1;
+    top: -250px;
+    background-color: #151515;
+    padding-top: 0;
+    transition: top 0.5s ease;
+    display: none;
+    justify-content: center;
+    
+  }
+  .sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+  }
+  .sidenav.active {
+    top: 7rem;
+    display: flex;
+    
+  }
+  .sidenav .close {
+    position: absolute;
+    top: 0;
+    right: 10px;
+    font-size: 36px;
+  }
+  .burger-icon span {
+    
+    width: 35px;
+    height: 5px;
+    background-color: azure;
+   
+  }
+  .burger-icon{
+    flex-direction: column;
+
+  }
+  #closeBtn{
+    display:none;
+    color: azure;
+  }
+   /* MENU BURGER*/
+}
+@media screen and (max-width: 400px) {
+  .navbar ul {
+    display: none;
+  }
+  #openBtn {
+    display: flex;
+  }
+  .answers {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 5rem;
+  }
+
+  .answers > button {
+    width: 350px;
+    height: 200px;
+  }
+  body {
+    background-image: url("Ressources/third-mobile.png");
+  }
+  .Questions {
+    padding-top: 2rem;
+  }
+  /* MENU BURGER*/
+
+  #openBtn {
+    display: flex;
+    align-items: center;
+    padding: 0rem 10rem 0rem 0rem;
+  }
+  .sidenav {
+    height: 7rem;
+    width: 100%;
+    position: fixed;
+    z-index: 1;
+    top: -250px;
+    background-color: #151515;
+    padding-top: 0;
+    transition: top 0.5s ease;
+    display: none;
+    justify-content: center;
+    
+  }
+  .sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+  }
+  .sidenav.active {
+    top: 7rem;
+    display: flex;
+    
+  }
+  .sidenav .close {
+    position: absolute;
+    top: 0;
+    right: 10px;
+    font-size: 36px;
+  }
+  .burger-icon span {
+    
+    width: 35px;
+    height: 5px;
+    background-color: azure;
+   
+  }
+  .burger-icon{
+    flex-direction: column;
+
+  }
+  #closeBtn{
+    display:none;
+    color: azure;
+}
+}
+@media screen and (min-width: 992px) {
+  li {
+    font-size: 3rem;
+  }
+
+  .startQuiz {
+    padding-top: 20rem;
+  }
+  body {
+    gap: 10rem;
   }
 }
